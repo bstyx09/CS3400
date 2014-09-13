@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>CS 3500</title>
+<title>CS 3400 HTML Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
 
@@ -30,7 +30,7 @@
 		       <A HREF="./e4.html">Example 4: Paragraph</A><br>
 			   <A HREF="./e5.html">Example 5: Formatting</A><br>
 		       <A HREF="./e6.html">Example 6: Comments</A><br>
-			   <A HREF="./e7.html">Example 7: Attributs</A><br>
+			   <A HREF="./e7.html">Example 7: Attributes</A><br>
 		       <A HREF="./e8.html">Example 8: Links</A><br>
 			   <A HREF="./e9.html">Example 9: Head</A><br>
 		       <A HREF="./e10.html">Example 10: CSS</A><br>
@@ -55,15 +55,51 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <b>This is where the text goes.</b><br><br>	 
-		 
+				<h1>Images</h1>
+				<br><br>
+				<p>Images are defined with the <b>&lt;img&gt;</b> tag. It only contains attributes and does not have a closing tag. The <b>src</b> attribute defines the URL of the image. Images can be a number of different file types, such as .JPG, .GIF or .PNG.
+				<br><br>
+				Additionally, alternate text for an image (if it can't be displayed) may be defined using the <b>alt</b> attribute.</p>
+				<br><br>
+				<pre><div id="code">
+	&lt;img src=&quot;../images/redapple.jpg&quot; alt=&quot;a red apple&quot;&gt;
+	&lt;img src=&quot;../images/redapple.png&quot; alt=&quot;a red apple&quot;&gt;
+	&lt;img src=&quot;../images/redapple.gif&quot; alt=&quot;a red apple&quot;&gt;
+				</div></pre>
+				<br><br>
+				<img src="../images/redapple.jpg" style="width:128px;height:128px">
+				<img src="../images/redapple.png" alt="a red apple" style="width:128px;height:128px">
+				<img src="../images/redapple.gif" alt="a red apple" style="width:128px;height:128px">
+				<br><br>
+				<p>The <b>style</b> attribute may be used within the <b>&lt;img&gt;</b> element to set the height and width of the displayed image.</p>
+				<br><br>
+				<pre><div id="code">
+&lt;img src=&quot;../images/redapple.jpg&quot; alt=&quot;a red apple&quot; style=&quot;width:256px;height:256px&quot;&gt;
+				</div></pre>
+				<br><br>
+				<img src="../images/redapple.png" alt="a red apple" style="width:256px;height:256px">
+				<br><br><br>
+				<p>Finally, a common convention is using an image as a link instead of, or in addition, to text.</p>
+				<br><br>
+				<pre><div id="code">
+	&lt;a href=&quot;e12.html&quot;&gt;
+&lt;img src=&quot;../images/next.png&quot; alt=&quot;Tables&quot; style=&quot;width:128px;height:128px&quot;&gt;
+	&lt;/a&gt;
+				</div></pre>
+				<br><br>
+				<p>Click the image below to go to Table examples.</p>
+				<br>
+				<a href="e12.html">
+					<img src="../images/next.png" alt="Tables" style="width:128px;height:128px">
+				</a>
+				
 		 </div>
 		 <!-- End Right Column -->
 		 
 		 <!-- Begin Footer -->
 		 <div id="footer">
 		       
-			  Created by: Us
+			  Created by: James Kwapien
 			    
 	     </div>
 		 <!-- End Footer -->

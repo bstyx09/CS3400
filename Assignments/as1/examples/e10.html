@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>CS 3500</title>
+<title>CS 3400 HTML Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
 
@@ -30,7 +30,7 @@
 		       <A HREF="./e4.html">Example 4: Paragraph</A><br>
 			   <A HREF="./e5.html">Example 5: Formatting</A><br>
 		       <A HREF="./e6.html">Example 6: Comments</A><br>
-			   <A HREF="./e7.html">Example 7: Attributs</A><br>
+			   <A HREF="./e7.html">Example 7: Attributes</A><br>
 		       <A HREF="./e8.html">Example 8: Links</A><br>
 			   <A HREF="./e9.html">Example 9: Head</A><br>
 		       <A HREF="./e10.html">Example 10: CSS</A><br>
@@ -55,15 +55,71 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <b>This is where the text goes.</b><br><br>	 
-		 
+		       <h1>CSS</h1>
+				<br>
+				<p>CSS (cascading style sheets) outline how individual HTML elements should be displayed, or styled. This can be achieved through 3 different methods. 
+				<br><br>
+				The first is called <i>inline</i> styling. This method uses the style <b>attribute</b> in HTML elements.
+				<br><br>
+				For example:</p>
+				<br><br>
+				<pre><div id="code">
+&lt;p style=&quot;color:red; margin-left:20px&quot;&gt;This is a red paragraph with a left margin.&lt;/p&gt;
+				</div></pre>
+				<br><br>
+				<p>The second is called <i>internal</i> styling, or using the <b>&lt;style&gt;</b> element in the <b>&lt;head&gt;</b> section.
+				<br><br>
+				For example:</p>
+				<br><br>
+				<pre><div id="code">
+&lt;head&gt;
+
+&lt;style&gt;
+	body {background-color:gray}
+	p	 {margin:10px}
+&lt;/style&gt;
+
+&lt;/head&gt;
+				</div></pre>
+				<br><br>
+				<p>Finally, the third method uses <i>external</i> style sheets, which are defined within the <b>&lt;link&gt;</b> element in the <b>&lt;head&gt;</b> section.
+				<br><br>
+				For example, part of the external style sheet for this site is declared as follows:</p>
+				<br><br>
+				<pre><div id="code">
+#leftcolumn {
+ font-size: medium;
+ font-weight: bold; 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #C7C7F9;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: auto;
+ width: 225px;
+ float: left;
+}
+#rightcolumn { 
+ float: right;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #E7E8F3;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: auto;
+ width: 648px;
+ display: inline;
+}
+				</div></pre>
+				<br><br>
+				<p>As you can see, CSS can be used in different ways to specify a wide variety of HTML elements.</p>
 		 </div>
 		 <!-- End Right Column -->
 		 
 		 <!-- Begin Footer -->
 		 <div id="footer">
 		       
-			  Created by: Us
+			  Created by: James Kwapien
 			    
 	     </div>
 		 <!-- End Footer -->

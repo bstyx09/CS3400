@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>CS 3500</title>
+<title>CS 3400 HTML Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
 
@@ -30,7 +30,7 @@
 		       <A HREF="./e4.html">Example 4: Paragraph</A><br>
 			   <A HREF="./e5.html">Example 5: Formatting</A><br>
 		       <A HREF="./e6.html">Example 6: Comments</A><br>
-			   <A HREF="./e7.html">Example 7: Attributs</A><br>
+			   <A HREF="./e7.html">Example 7: Attributes</A><br>
 		       <A HREF="./e8.html">Example 8: Links</A><br>
 			   <A HREF="./e9.html">Example 9: Head</A><br>
 		       <A HREF="./e10.html">Example 10: CSS</A><br>
@@ -55,15 +55,156 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <b>This is where the text goes.</b><br><br>	 
-		 
+		       <h1>Lists</h1>
+			   <br><br>	 
+			   <p>Lists in HTML consist of Unordered Lists, Ordered Lists and Description Lists. These lists can be styled with CSS.</p>
+			   <br><br>
+			   <h2>Unordered</h2>
+			   <br><br>
+			   <p>Unordered lists can by styled to define the marker style.
+			   <br><br>
+			   <pre><div id="code">
+			   &lt;ul style=&quot;list-style-type:square&quot;&gt;
+				&lt;li&gt;Vacuum&lt;/li&gt;
+				&lt;li&gt;Dust&lt;/li&gt;
+				&lt;li&gt;Dishes&lt;/li&gt;
+			   &lt;/ul&gt;
+			   </div></pre>
+			   <br><br>
+			    <ul style="margin-left:50px; list-style-type:square">
+				<li>Vacuum</li>
+				<li>Dust</li>
+				<li>Dishes</li>
+			   </ul>
+			   <br><br>
+			   <pre><div id="code">
+			   &lt;ul style=&quot;list-style-type:disc&quot;&gt;
+				&lt;li&gt;Vacuum&lt;/li&gt;
+				&lt;li&gt;Dust&lt;/li&gt;
+				&lt;li&gt;Dishes&lt;/li&gt;
+			   &lt;/ul&gt;
+			   </div></pre>
+			   <br><br>
+			   <ul style="margin-left:50px; list-style-type:disc">
+				<li>Vacuum</li>
+				<li>Dust</li>
+				<li>Dishes</li>
+			   </ul>
+			   <br><br>
+			   <pre><div id="code">
+			   &lt;ul style=&quot;list-style-type:circle&quot;&gt;
+				&lt;li&gt;Vacuum&lt;/li&gt;
+				&lt;li&gt;Dust&lt;/li&gt;
+				&lt;li&gt;Dishes&lt;/li&gt;
+			   &lt;/ul&gt;
+			   </div></pre>
+			   <br><br>
+			   <ul style="margin-left:50px; list-style-type:circle">
+				<li>Vacuum</li>
+				<li>Dust</li>
+				<li>Dishes</li>
+			   </ul>
+			   <br><br>
+			   <h2>Ordered</h2>
+			   <br><br>
+			   <p>Ordered lists can include a <b>type</b> attribute to define the marker type.</p>
+			   <br><br>
+			    <pre><div id="code">
+			   &lt;ol type=&quot;1&quot;&gt;
+				&lt;li&gt;Vacuum&lt;/li&gt;
+				&lt;li&gt;Dust&lt;/li&gt;
+				&lt;li&gt;Dishes&lt;/li&gt;
+			   &lt;/ol&gt;
+			   </div></pre>
+			   <br><br>
+			    <ol type="1" style="margin-left:50px">
+				<li>Vacuum</li>
+				<li>Dust</li>
+				<li>Dishes</li>
+			   </ol>
+			   <br><br>
+			   <pre><div id="code">
+			   &lt;ol type=&quot;A&quot;&gt;
+				&lt;li&gt;Vacuum&lt;/li&gt;
+				&lt;li&gt;Dust&lt;/li&gt;
+				&lt;li&gt;Dishes&lt;/li&gt;
+			   &lt;/ol&gt;
+			   </div></pre>
+			   <br><br>
+			   <ol type="A" style="margin-left:50px">
+				<li>Vacuum</li>
+				<li>Dust</li>
+				<li>Dishes</li>
+			   </ol>
+			   <br><br>
+			   <pre><div id="code">
+			   &lt;ol type=&quot;a&quot;&gt;
+				&lt;li&gt;Vacuum&lt;/li&gt;
+				&lt;li&gt;Dust&lt;/li&gt;
+				&lt;li&gt;Dishes&lt;/li&gt;
+			   &lt;/ol&gt;
+			   </div></pre>
+			   <br><br>
+			   <ol type="a" style="margin-left:50px">
+				<li>Vacuum</li>
+				<li>Dust</li>
+				<li>Dishes</li>
+			   </ol>
+			   <br><br>
+			   <pre><div id="code">
+			   &lt;ol type=&quot;I&quot;&gt;
+				&lt;li&gt;Vacuum&lt;/li&gt;
+				&lt;li&gt;Dust&lt;/li&gt;
+				&lt;li&gt;Dishes&lt;/li&gt;
+			   &lt;/ol&gt;
+			   </div></pre>
+			   <br><br>
+			   <ol type="I" style="margin-left:50px">
+				<li>Vacuum</li>
+				<li>Dust</li>
+				<li>Dishes</li>
+			   </ol>
+			   <br><br>
+			   <pre><div id="code">
+			   &lt;ol type=&quot;i&quot;&gt;
+				&lt;li&gt;Vacuum&lt;/li&gt;
+				&lt;li&gt;Dust&lt;/li&gt;
+				&lt;li&gt;Dishes&lt;/li&gt;
+			   &lt;/ol&gt;
+			   </div></pre>
+			   <br><br>
+			   <ol type="i" style="margin-left:50px">
+				<li>Vacuum</li>
+				<li>Dust</li>
+				<li>Dishes</li>
+			   </ol>
+			   <br><br>
+			   <h2>Description</h2>
+			   <br><br>
+			   <p>A description list contains a description of each term. The <b>&lt;dt&gt;</b> tag defines the term, and the <b>&lt;dd&gt;</b> tag defines the data.</p>
+			   <br><br>
+			   <pre><div id="code">
+				&lt;dl&gt;
+					&lt;dt&gt;22 / 7&lt;/dt&gt;
+					&lt;dd&gt;... &gt; pi&lt;/dd&gt;
+					&lt;dt&gt;Fibonacci Sequence&lt;/dt&gt;
+					&lt;dd&gt;... - 1 + 2 + 3 + 5 + 8 + ...&lt;/dd&gt;
+				&lt;/dl&gt;
+				</div></pre>
+				<br><br>
+				<dl style="margin-left:50px">
+					<dt>22 / 7</dt>
+					<dd>... > pi</dd>
+					<dt>Fibonacci Sequence</dt>
+					<dd>... - 1 + 2 + 3 + 5 + 8 + ...</dd>
+				</dl>
 		 </div>
 		 <!-- End Right Column -->
 		 
 		 <!-- Begin Footer -->
 		 <div id="footer">
 		       
-			  Created by: Us
+			  Created by: James Kwapien
 			    
 	     </div>
 		 <!-- End Footer -->

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>CS 3500</title>
+<title>CS 3400 HTML Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
 
@@ -30,7 +30,7 @@
 		       <A HREF="./e4.html">Example 4: Paragraph</A><br>
 			   <A HREF="./e5.html">Example 5: Formatting</A><br>
 		       <A HREF="./e6.html">Example 6: Comments</A><br>
-			   <A HREF="./e7.html">Example 7: Attributs</A><br>
+			   <A HREF="./e7.html">Example 7: Attributes</A><br>
 		       <A HREF="./e8.html">Example 8: Links</A><br>
 			   <A HREF="./e9.html">Example 9: Head</A><br>
 		       <A HREF="./e10.html">Example 10: CSS</A><br>
@@ -55,15 +55,95 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <b>This is where the text goes.</b><br><br>	 
-		 
+		       <h1>Tables</h1>
+			   <br><br>
+			   <p>Table are defined with the <b>&lt;table&gt;</b> tag. Tables are divided into <b>table rows</b> and <b>table data</b> with the <b>&lt;tr&gt;</b> and <b>&lt;td&gt;</b> tags, respectively. A <b>table row</b> can also be divided into <b>table headings</b> with the <b>&lt;th&gt;</b> tag.</p>
+			   <br><br>
+			   <pre><div id="code">
+		&lt;table style=&quot;width:100%&quot;&gt;
+			&lt;tr&gt;
+				&lt;th&gt;City&lt;/th&gt;
+				&lt;th&gt;Team&lt;/th&gt;
+				&lt;th&gt;Wins&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Buffalo&lt;/td&gt;
+				&lt;td&gt;Sabres&lt;/td&gt;
+				&lt;td&gt;73&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Boston&lt;/td&gt;
+				&lt;td&gt;Bruins&lt;/td&gt;
+				&lt;td&gt;11&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Toronto&lt;/td&gt;
+				&lt;td&gt;Maple Leafs&lt;/td&gt;
+				&lt;td&gt;7&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+				</div></pre>
+				<br><br>
+			<table style="width:100%">
+			<tr>
+				<th>City</th>
+				<th>Team</th>
+				<th>Wins</th>
+			</tr>
+			<tr>
+				<td>Buffalo</td>
+				<td>Sabres</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td>Boston</td>
+				<td>Bruins</td>
+				<td>11</td>
+			</tr>
+			<tr>
+				<td>Toronto</td>
+				<td>Maple Leafs</td>
+				<td>7</td>
+			</tr>
+		</table>
+		<br><br>
+		<p>Table elements can also be styled with CSS.</p>
+		<br><br>
+		<pre><div id="code">
+		table, th, td {
+			border: 1px solid black;
+		}
+		</div></pre>
+		<br><br>
+		<table border="1" style="width:100%">
+			<tr>
+				<th>City</th>
+				<th>Team</th>
+				<th>Wins</th>
+			</tr>
+			<tr>
+				<td>Buffalo</td>
+				<td>Sabres</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td>Boston</td>
+				<td>Bruins</td>
+				<td>11</td>
+			</tr>
+			<tr>
+				<td>Toronto</td>
+				<td>Maple Leafs</td>
+				<td>7</td>
+			</tr>
+		</table>
 		 </div>
 		 <!-- End Right Column -->
 		 
 		 <!-- Begin Footer -->
 		 <div id="footer">
 		       
-			  Created by: Us
+			  Created by: James Kwapien
 			    
 	     </div>
 		 <!-- End Footer -->

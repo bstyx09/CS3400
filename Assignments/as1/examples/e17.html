@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>CS 3500</title>
+<title>CS 3400 HTML Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
 
@@ -30,7 +30,7 @@
 		       <A HREF="./e4.html">Example 4: Paragraph</A><br>
 			   <A HREF="./e5.html">Example 5: Formatting</A><br>
 		       <A HREF="./e6.html">Example 6: Comments</A><br>
-			   <A HREF="./e7.html">Example 7: Attributs</A><br>
+			   <A HREF="./e7.html">Example 7: Attributes</A><br>
 		       <A HREF="./e8.html">Example 8: Links</A><br>
 			   <A HREF="./e9.html">Example 9: Head</A><br>
 		       <A HREF="./e10.html">Example 10: CSS</A><br>
@@ -55,15 +55,31 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <b>This is where the text goes.</b><br><br>	 
-		 
+		       <h1>iFrames</h1>
+			   <br><br>	 
+			   <p>iFrames display web pages within other web pages.</p>
+			   <br><br>
+			   <pre><div id="code">
+			&lt;iframe src=&quot;URL&quot;&gt;&lt;/iframe&gt;
+				</div></pre>
+				<br><br>
+				<p>The URL is the location of the iFrame page.
+				<br><br>
+				You can set attributes such as height, width and even remove the border with <b>frameborder</b>.</p>
+				<br><br>
+				<pre><div id="code">
+			&lt;iframe src=&quot;./e16.html&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+			&lt;/iframe&gt;
+				</div></pre>
+				<br><br>
+				<iframe src="./e17.html" width="100%" height="200"></iframe>
 		 </div>
 		 <!-- End Right Column -->
 		 
 		 <!-- Begin Footer -->
 		 <div id="footer">
 		       
-			  Created by: Us
+			  Created by: James Kwapien
 			    
 	     </div>
 		 <!-- End Footer -->

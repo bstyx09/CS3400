@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>CS 3500</title>
+<title>CS 3400 HTML Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
 
@@ -30,7 +30,7 @@
 		       <A HREF="./e4.html">Example 4: Paragraph</A><br>
 			   <A HREF="./e5.html">Example 5: Formatting</A><br>
 		       <A HREF="./e6.html">Example 6: Comments</A><br>
-			   <A HREF="./e7.html">Example 7: Attributs</A><br>
+			   <A HREF="./e7.html">Example 7: Attributes</A><br>
 		       <A HREF="./e8.html">Example 8: Links</A><br>
 			   <A HREF="./e9.html">Example 9: Head</A><br>
 		       <A HREF="./e10.html">Example 10: CSS</A><br>
@@ -55,15 +55,87 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <b>This is where the text goes.</b><br><br>	 
+		       <h1>Layout</h1>
+			   <br><br>	 
+			   <p>HTML5 defines different parts of a web page with new semantic elements.</p>
+			   <br><br>
+			   <table border="1" style="width:33%">
+					<tr>
+						<td colspan="2">&lt;header&gt;</td>
+					</tr>
+					<tr>
+						<td colspan="2">&lt;nav&gt;</td>
+					</tr>
+					<tr>
+						<td>&lt;section&gt;</td>
+						<td rowspan="2">&lt;aside&gt;</td>
+					</tr>
+					<tr>
+						<td>&lt;article&gt;</td>
+					</tr>
+					<tr>
+						<td colspan="2">&lt;footer&gt;</td>
+					</tr>
+				</table>
+				<br><br>
+				<p>The <b>&lt;header&gt;</b> defines the header for a document or a section. The <b>&lt;nav&gt;</b> defines a container for navigation links. The <b>&lt;section&gt;</b> defines a section in a document. The <b>&lt;article&gt;</b> defines an independent self-contained article. The <b>&lt;aside&gt;</b> defines content aside from the content, such as a sidebar. The <b>&lt;footer&gt;</b> defines a footer for a document or section.</p>
+				<br><br>
+				<h2>&lt;div&gt;</h2>
+				<br><br>
+				<p>The <b>&lt;div&gt;</b> element is a block level element, which, as we've seen, was designed to group HTML elements. However, since CSS can position and style <b>&lt;div&gt;</b> elements, layouts can be designed using them.
+				<br><br>
+				The following is an abbreviated excerpt from the code that deals with the layout of this page, featuring <b>&lt;div&gt;</b> elements.</p>
+				<br><br>
+				<pre><div id="code">
+&lt;body&gt;
+
+   &lt;!-- Begin Wrapper --&gt;
+   &lt;div id=&quot;wrapper&quot;&gt;
+   
+         &lt;!-- Begin Header --&gt;
+         &lt;div id=&quot;header&quot;&gt;
 		 
+		       ...content...
+			   
+		 &lt;/div&gt;
+		 &lt;!-- End Header --&gt;
+		 
+		 &lt;!-- Begin Left Column --&gt;
+		 &lt;div id=&quot;leftcolumn&quot;&gt;
+		 
+			   ...content...
+
+		 &lt;/div&gt;
+		 &lt;!-- End Left Column --&gt;
+		 
+		 &lt;!-- Begin Right Column --&gt;
+		 &lt;div id=&quot;rightcolumn&quot;&gt;
+		 
+			...content...
+		 
+		 &lt;/div&gt;
+		 &lt;!-- End Right Column --&gt;
+		 
+		 &lt;!-- Begin Footer --&gt;
+		 &lt;div id=&quot;footer&quot;&gt;
+		       
+			  ...content...
+			    
+	     &lt;/div&gt;
+		 &lt;!-- End Footer --&gt;
+		 
+   &lt;/div&gt;
+   &lt;!-- End Wrapper --&gt;
+   
+&lt;/body&gt;
+				</div></pre>
 		 </div>
 		 <!-- End Right Column -->
 		 
 		 <!-- Begin Footer -->
 		 <div id="footer">
 		       
-			  Created by: Us
+			  Created by: James Kwapien
 			    
 	     </div>
 		 <!-- End Footer -->

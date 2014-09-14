@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>CS 3500</title>
+<title>CS 3400 HTML Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
 
@@ -30,7 +30,7 @@
 		       <A HREF="./e4.html">Example 4: Paragraph</A><br>
 			   <A HREF="./e5.html">Example 5: Formatting</A><br>
 		       <A HREF="./e6.html">Example 6: Comments</A><br>
-			   <A HREF="./e7.html">Example 7: Attributs</A><br>
+			   <A HREF="./e7.html">Example 7: Attributes</A><br>
 		       <A HREF="./e8.html">Example 8: Links</A><br>
 			   <A HREF="./e9.html">Example 9: Head</A><br>
 		       <A HREF="./e10.html">Example 10: CSS</A><br>
@@ -55,15 +55,112 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <b>This is where the text goes.</b><br><br>	 
-		 
+		       <h1>Forms</h1>
+			   <br><br>	 
+			   <p>HTML forms are used to pass data to a server. They can contain input elements like text fields, checkboxes, radio-buttons, submit buttons and others.
+			   <br><br>
+			   The <b>&lt;form&gt;</b> tag is used to create an HTML form:</p>
+			   <br><br>
+			   <pre><div id="code">
+		&lt;form&gt;
+			...
+			input elements
+			...
+		&lt;/form&gt;
+			   </div></pre>
+			   <br><br>
+			   <p>The <b>&lt;input&gt;</b> element is used to select user information, and can vary in many ways, depending on the type attribute. Some of the most common input types follow.</p>
+			   <br><br>
+			   <h2>Text Fields</h2>
+			   <br><br>
+			   <p>The <b>&lt;input type=&quot;text&quot;&gt;</b> attribute defines a one-line input field that a user can enter text into:</p>
+			   <br><br>
+			   <pre><div id="code">
+		&lt;form&gt;
+			Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;&lt;br&gt;
+			Date of Birth: &lt;input type=&quot;text&quot; name=&quot;dob&quot;&gt;
+		&lt;/form&gt;
+			   </div></pre>
+			   <br><br>
+			   <form>
+				Name: <input type="text" name="name"><br>
+				Date of Birth: <input type="text" name="dob">
+			   </form>
+			   <br><br>
+			   <h2>Password Field</h2>
+			   <br><br>
+			   <p>The <b>&lt;input type=&quot;password&quot;&gt;</b> defines a password field, and is similar to a text field implementation:</p>
+			   <br><br>
+			   <pre><div id="code">
+		&lt;form&gt;
+			Password: &lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;
+		&lt;/form&gt;
+				</div></pre>
+				<br><br>
+				<form>
+					Password: <input type="password" name="pwd">
+				</form>
+				<br><br>
+				<p>If you'll notice above, characters entered into a password field are masked.</p>
+				<br><br>
+				<h2>Radio Buttons</h2>
+				<br><br>
+				<p><b>&lt;input type=&quot;radio&quot;&gt;</b> defines a radio button. Radio buttons allow a user to select <i>only one</i> of the choices:</p>
+				<br><br>
+				<pre><div id="code">
+	&lt;form&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;pet&quot; value=&quot;dog&quot;&gt;Dogs&lt;br&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;pet&quot; value=&quot;cat&quot;&gt;Cats
+	&lt;/form&gt;
+				</div></pre>
+				<br><br>
+				<form>
+				<input type="radio" name="pet" value="dog">Dogs<br>
+				<input type="radio" name="pet" value="cat">Cats
+				</form>
+				<br><br>
+				<h2>Checkboxes</h2>
+				<br><br>
+				<p><b>&lt;input type=&quot;checkbox&quot;&gt;</b> defines a checkbox. Unlike radio buttons, checkboxes allow a user to select any number of options simultaneously:</p>
+				<br><br>
+				<pre><div id="code">
+&lt;form&gt;
+	&lt;input type=&quot;checkbox&quot; name=&quot;education&quot; value=&quot;highschool&quot;&gt;Highschool Diploma&lt;br&gt;
+	&lt;input type=&quot;checkbox&quot; name=&quot;education&quot; value=&quot;somecollege&quot;&gt;Some College&lt;br&gt;
+	&lt;input type=&quot;checkbox&quot; name=&quot;education&quot; value=&quot;college&quot;&gt;College Diploma
+&lt;/form&gt;
+				</div></pre>
+				<br><br>
+				<form>
+				<input type="checkbox" name="education" value="highschool">Highschool<br>
+				<input type="checkbox" name="education" value="somecollege">Some College<br>
+				<input type="checkbox" name="education" value="college">College
+				</form>
+				<br><br>
+				<h2>Submit Button</h2>
+				<br><br>
+				<p><b>&lt;input type=&quot;submit&quot;&gt;</b> defines a submit button. The function of the submit button is to send form data to a server. The data is sent to the specified page or file in the form's action attribute. The file typically does something with the received input.</p>
+				<br><br>
+				<pre><div id="code">
+		&lt;form name=&quot;input&quot; action=&quot;./e17.html&quot; method=&quot;get&quot;&gt;
+			Username: &lt;input type=&quot;text&quot; name=&quot;user&quot;&gt;
+			&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+		&lt;/form&gt;
+				</div></pre>
+				<br><br>
+				<form name="input" action="./e17.html" method="get">
+				Username: <input type="text" name="user">
+				<input type="submit" value="Submit">
+				</form>
+				<br><br>
+				<p>Note from the code above that the submit button will act as a link to 'e17.html', which happens to be the next example.</p>
 		 </div>
 		 <!-- End Right Column -->
 		 
 		 <!-- Begin Footer -->
 		 <div id="footer">
 		       
-			  Created by: Us
+			  Created by: James Kwapien
 			    
 	     </div>
 		 <!-- End Footer -->

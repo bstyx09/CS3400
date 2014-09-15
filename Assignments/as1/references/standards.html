@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CS 3400 HTML Project</title>
+<link rel="stylesheet" type="text/css" href="../main.css" />
+</head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+		 
+		       CS 3400 
+		       <br>Graphic User Interface
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+		 
+			   <A HREF="./">Home</A><br>
+			   <A HREF="../examples/e1.html">Examples</A><br>
+			   <A HREF="./editors.html">Editors</A><br>
+			   <A HREF="./standards.html">Standards</A><br>
+			   <A HREF="./tools.html">Tools</A><br>
+
+		 </div>
+		 <!-- End Left Column -->
+		 
+		 <!-- Begin Right Column -->
+		 <div id="rightcolumn">
+		       
+		       <h1>HTML Standards</h1>
+			   <br><br>	 
+			   <h2>Closing Elements</h2>
+			   <br><p>All tags should be closed to denote the closing of an element.<br>Self closing tags should have a space before the forward slash.</p>
+			   <pre><div id="code1">
+&lt;br /&gt;
+				</div></pre>
+				<br><hr>
+			   <br>
+			   <h2>Attributes and Tags</h2>
+			   <br><p>Every attribute and tag should be written in lowercase. However, if the data in the code needs to be read by a human, proper capitalization should be followed.</p>
+			   <pre><div id="code2">
+&lt;a href="http://www.google.com" title="Google website link"&gt;Google.com&lt;/a&gt;
+				</div></pre>
+				
+				<br><hr>
+				<br>
+				<h2>Quotes</h2>
+				<br><p>In order to follow W3C specifications for XHTML, every attribute should have a value and use double or single quotes
+				<br><b>Failure to use quotes could lead to security vulnerabilities.</b></p>
+				<pre><div id="code3">
+Incorrect:
+				
+&lt;input type=text name=email disabled=disabled&gt;
+				
+Correct:
+				
+&lt;input type="text" name="email" disabled="disabled" &gt;
+&lt;input type='text' name='email' disabled='disabled' &gt;
+				</div></pre>
+				
+				<br><hr>
+			   <br>
+			   <h2>Indentation</h2>
+			   <br><p></p>When indenting, tabs should be used instead of spaces. 
+			   <br>Nested elements should be indented accordingly. PHP blocks should also be indented to match the HTML code surrounding it. 
+			   <br>Closing blocks should match the indentation of the opening blocks.</p>
+			   
+			   <p>Correct:</p>
+<pre class="brush: php; title: ; notranslate" title="">
+&lt;?php if ( ! have_posts() ) : ?&gt;
+	&lt;div id=&quot;post-1&quot; class=&quot;post&quot;&gt;
+		&lt;h1 class=&quot;entry-title&quot;&gt;Not Found&lt;/h1&gt;
+		&lt;div class=&quot;entry-content&quot;&gt;
+			&lt;p&gt;Apologies, but no results were found.&lt;/p&gt;
+			&lt;?php get_search_form(); ?&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;?php endif; ?&gt;
+</pre><br><br>
+<p>Incorrect:</p>
+<pre class="brush: php; title: ; notranslate" title="">
+		&lt;?php if ( ! have_posts() ) : ?&gt;
+		&lt;div id=&quot;post-0&quot; class=&quot;post error404 not-found&quot;&gt;
+			&lt;h1 class=&quot;entry-title&quot;&gt;Not Found&lt;/h1&gt;
+			&lt;div class=&quot;entry-content&quot;&gt;
+			&lt;p&gt;Apologies, but no results were found.&lt;/p&gt;
+&lt;?php get_search_form(); ?&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+&lt;?php endif; ?&gt;
+<!-- Much of this was pulled from http://make.wordpress.org/core/handbook/coding-standards/html/ -->
+			   
+		 
+		 </div>
+		 <!-- End Right Column -->
+		 
+		 <!-- Begin Footer -->
+		 <div id="footer">
+		       
+			  Created by: Us
+			    
+	     </div>
+		 <!-- End Footer -->
+		 
+   </div>
+   <!-- End Wrapper -->
+   
+</body>
+</html>

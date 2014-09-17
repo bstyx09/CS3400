@@ -97,7 +97,216 @@ Your browser does not support the audio element.
 			   </div></pre>
 			   <br><br>
 			   
-			   <a href="http://www.w3schools.com/html/html5_audio.asp">Resource.</a><br>			   
+			   <a href="http://www.w3schools.com/html/html5_audio.asp">Resource.</a><br><br>			   
+		 
+			   <b>Canvas</b><br>
+			   <p>Another new feature of HTML5 is canvas. The HTML5 canvas element is used to draw graphics, on the fly, via scripting (usually JavaScript).
+The canvas element is only a container for graphics. You must use a script to actually draw the graphics.
+Canvas has several methods for drawing paths, boxes, circles, text, and adding images.</p><br>
+			   
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+
+</script> 
+			   
+			   <br><br>
+			   <pre><div id="code">
+&lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"&gt;
+Your browser does not support the HTML5 canvas tag.&lt;/canvas&gt;
+
+&lt;script&gt;
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+
+&lt;/script&gt; 
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/html/html5_audio.asp">Resource.</a><br>
+		 
+<br>
+			   
+			   <b>SVG</b><br>
+			   <p>SVG stands for Scalable Vector Graphics. SVG is used to define vector-based graphics for the Web, in XML format.
+				SVG graphics do not lose any quality if they are zoomed or resized</p><br>
+			   
+<svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+			   
+			   <br><br>
+			   <pre><div id="code">
+&lt;svg width="300" height="200"&gt;
+  &lt;polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" /&gt;
+&lt;/svg&gt;
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/html/html5_svg.asp">Resource.</a><br><br>	
+
+<br>
+			   
+			   <b>Drag and Drop</b><br>
+			   <p>A new HTML5 feature allows the drag and drop of images.</p><br>
+			   
+<style>
+#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text/html", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text/html");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="../images/img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+			   
+			   <br><br>
+			   <pre><div id="code">
+&lt;style&gt;
+#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+&lt;/style&gt;
+&lt;script&gt;
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text/html", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text/html");
+    ev.target.appendChild(document.getElementById(data));
+}
+&lt;/script&gt;
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/html/html5_draganddrop.asp">Resource.</a><br><br>	
+
+			   <b>Geolocation</b><br>
+			   <p>A new HTML5 feature allows the use of WiFi or GPS to locate  a user.</p><br>
+			   
+	<p id="demo">Click the button to get your position:</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<div id="mapholder"></div>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude+","+position.coords.longitude;
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>		   
+			   
+			   <br><br>
+			   <pre><div id="code">
+&lt;p id="demo"&gt;Click the button to get your position:&lt;/p&gt;
+
+&lt;button onclick="getLocation()"&gt;Try It&lt;/button&gt;
+
+&lt;div id="mapholder"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude+","+position.coords.longitude;
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("mapholder").innerHTML = "&lt;img src='"+img_url+"'&gt;";
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+&lt;/script&gt;
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/html/html5_geolocation.asp">Resource.</a><br><br>			   
 		 
 		 </div>
 		 <!-- End Right Column -->

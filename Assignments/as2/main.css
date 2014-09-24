@@ -1,0 +1,70 @@
+/*
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
+*/
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+
+}
+#header {
+ font-size: xx-large;
+ color: #FFFFFF;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 80px;
+ margin: 10px 0px 5px 0px;
+ background: #0F0F83;
+}
+#leftcolumn {
+ font-size: medium;
+ font-weight: bold; 
+ color: #333;
+ border: 1px solid #ccc;
+ background: #C7C7F9;
+ margin: 0px 5px 5px 0px;
+ padding: 10px;
+ height: auto;
+ width: 300px;
+ float: left;
+}
+#rightcolumn { 
+ float: right;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #E7E8F3;
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: auto;
+ width: 573px;
+ display: inline;
+}
+#footer { 
+ width: 900px;
+ clear: both;
+ color: #FFFFFF;
+ border: 1px solid #ccc;
+ background: #0F0F83;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}
+#code {
+ background: #F8F8FF;
+ border: black dashed 1px;
+ padding: 6px;
+}

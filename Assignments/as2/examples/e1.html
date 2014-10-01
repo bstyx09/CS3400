@@ -127,10 +127,15 @@
 			<br><br><hr>
 			<h3>Inline Styles</h3>
 			<br><br><p>An inline style loses many of the advantages of the style sheet and should be used sparingly.<br>
-			<br>To use inline styles, add the style attribute to the relevant tag. The style attribute can contain any CSS property.<br>Here is an example:<br>
+			<br>To use inline styles, add the style attribute to the relevant tag. The style attribute can contain any CSS property.<br><br>Here is an example:<br>
 			<pre><div id="code">
 	&lt;h2 style="color:blue;margin-left:25px;"&gt;This is the heading.&lt;/h2&gt;
 			</div></pre>
+			<br><br>
+			<h3>Multiple Styles Will Cascade into One</h3><br><br>
+			<p>When there is more than one style specified for an HTML element, these styles will cascade into a style in the following order</p><br>
+			<p>- Browser default<br>- External style sheet<br>- Internal style sheet (in the head section)<br>- Inline Style<br><br> The style with the most priority is the inline style. The style with the least is the browser default.</p>
+			<br>
 	 
 		 </div>
 		 <!-- End Right Column -->

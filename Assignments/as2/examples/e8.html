@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>CS 3400 CSS Project</title>
+<title>CS 3400 CSS Project: CSS Media Types</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
 <style>
@@ -49,11 +49,66 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
-			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
-			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
+		       <h1>CSS Media Types</h1>
+			   <br><hr><br><p>By utilizing the @media rule, a website can have a different layout for screen, print, mobile phone, tablet, etc.</p><br>
+			   <hr><br>
+			   <h2>Media Types</h2>
+			   <br><p>Some CSS properties are only designed for a certain media. For example the "voice-family" property is designed for aural user agents. 
+			   Some other properties can be used for different media types. 
+			   For example, the "font-size" property can be used for both screen and print media, but perhaps with different values. 
+			   A document usually needs a larger font-size on a screen than on paper, and sans-serif fonts are easier to read on the screen, while serif fonts are easier to read on paper.
+			   </p><br>
+			   <hr><br>
+			   <h2>The @media Rule</h2><br>
+			   <p>The @media rule allows different style rules for different media in the same style sheet. 
+			   <br>Here's a list of different media types</p>
+			   <table style="width:100%">
+			<tr>
+				<th>Media Type</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>all</td>
+				<td>Used for all media type devices</td>
+			</tr>
+			<tr>
+				<td>aural</td>
+				<td>Used for speech and sound synthesizers</td>
+			</tr>
+			<tr>
+				<td>braille</td>
+				<td>Used for braille tactile feedback devices</td>
+			</tr>
+			<tr>
+				<td>embossed</td>
+				<td>Used for paged braille printers</td>
+			</tr>
+			<tr>
+				<td>handheld</td>
+				<td>Used for small or handheld devices</td>
+			</tr>
+			<tr>
+				<td>print</td>
+				<td>Used for printers</td>
+			</tr>
+			<tr>
+				<td>projection</td>
+				<td>Used for projected presentations like slideshows</td>
+			</tr>
+			<tr>
+				<td>screen</td>
+				<td>Used for computer screens</td>
+			</tr>
+			<tr>
+				<td>tty</td>
+				<td>Used for media using a fixed-pitch character grid, like teletypes and terminals</td>
+			</tr>
+			<tr>
+				<td>tv</td>
+				<td>Used for televsion-type devices</td>
+			</tr>
+		</table>
+			   
 			   
 		 
 		 </div>

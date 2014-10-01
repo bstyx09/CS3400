@@ -47,13 +47,102 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
+		       <h1>Layout Elements</h1>
 			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
+			   <h2>Box Model</h2>
+			   <br>
+			   <p>In HTML, elements, particularly layout elements styled with CSS, can be looked at as boxes. Hence, the term 'box model.' The CSS box model wraps around HTML elements, and consists of <b>margins</b>, <b>borders</b>, <b>padding</b> and the nested content. This design gives us the flexibility to define space and borders between and around elements, as illustrated below:
 			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
-			   
-		 
+			   <img src="../images/box-model.gif"></img>
+			   <br><br>
+					<ul style="margin-left:50px">
+						<li><b>Content</b> - where the displayed content exists, typically text and images</li>
+						<li><b>Padding</b> - a transparent area</li>
+						<li><b>Border</b> - a potentially visible border</li>
+						<li><b>Margin</b> - a transparent area outside the border</li>
+					</ul>
+			   </p>
+			   <br><br>
+			   <h3>Width and Height</h3>
+			   <br>
+			   <p>Knowledge of the box model is crucial when designing the height and width of a layout, and the elements contained therein. It is important to note that the <b>height and width properties of an element only affect the content area.</b> In order to properly reflect your design, the size of the padding, borders and margin must be taken into account.</p>
+			   <br><br>
+			   <h4>Example:</h4>
+			   <br>
+			   <div id="code">
+					div {
+						width: 900px;
+						padding: 10px;
+						border: 5px solid black;
+						margin: 10px;
+					}
+			   </div>
+			   <br>
+			   <p>If you just look at the width property, you might think the div element is 900px wide. But you must take into account the other elements of the box model as well. Namely, the padding, border and margin. If we add those to the content area, we see div is actually 925px wide.</p>
+			   <br><br>
+			   <h2>Border</h2>
+			   <br>
+			   <p>The <b>border-style</b> property specifies what kind of border to display. This property is required for any other border properties to have any affect.</p>
+			   <br><br>
+			   <h4>Examples:</h4>
+			   <br>
+			   <div style="border-style: dotted">
+				 <b>{ border-style: dotted; }</b>
+			   </div>
+			   <br>
+			   <div style="border-style: solid">
+				 <b>{ border-style: solid; }</b>
+			   </div>
+			   <br>
+			   <div style="border-style: ridge">
+				 <b>{ border-style: ridge; }</b>
+			   </div>
+			   <br>
+			   <div style="border-style: double">
+				 <b>{ border-style: double; }</b>
+			   </div>
+			   <br>
+			   <p>There are a number of other border styles as well.</p>
+			   <br><br>
+			   <h3>Border Width</h3>
+			   <br>
+			   <p>The <b>border-width</b> property sets the width of the border. This value can be set in pixels, or in pre-defined values of <b>thin</b>, <b>medium</b> or <b>thick</b>. As we noted above, this property must be used in conjunction with the <b>border-style</b> property.</p>
+			   <br><br>
+			   <h4>Examples:</h4>
+			   <br>
+			   <div style="border-style: solid; border-width: 5px">
+				 <b>{ border-style: solid; border-width: 5px; }</b>
+			   </div>
+			   <br>
+			   <div style="border-style: solid; border-width: thin">
+				 <b>{ border-style: solid; border-width: thin; }</b>
+			   </div>
+			   <br>
+			   <div style="border-style: solid; border-width: medium">
+				 <b>{ border-style: solid; border-width: medium; }</b>
+			   </div>
+			   <br>
+			   <div style="border-style: solid; border-width: thick">
+				 <b>{ border-style: solid; border-width: thick; }</b>
+			   </div>
+			   <br><br>
+			   <p>There are other properties related to borders as well, such as <b>border-color</b>. Borders can also be styled per side, with specifications such as <b>border-top-style</b>, etc.</p>
+			   <br><br>
+			   <h2>Outlines</h2>
+			   <br>
+			   <p>An <b>outline</b> is a line that is drawn around elements, including outside the border, to make the element pop. The style, color and width of an outline may be specified in this way.</p>
+			   <br><br>
+			   <img src="../images/box_outline.gif"></img>
+			   <br><br>
+			   <p>Note that the <b>outline</b> property is not part of an element's dimensions.</p>
+			   <br><br>
+			   <h2>Margin</h2>
+			   <br>
+			   <p>The <b>margin</b> clears an area around an element and outside its border. The margin, as mentioned in the box model description, is completely transparent. Note that it is possible to use negative values (default units are pixels) in order to overlap content.</p>
+			   <br><br>
+			   <h2>Padding</h2>
+			   <br>
+			   <p>The <b>padding</b> clears an area around the content, but inside the border, of an element. The padding is affected by the background color of the element.</p>
 		 </div>
 		 <!-- End Right Column -->
 		 

@@ -47,13 +47,85 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
-			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
-			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
-			   
-		 
+				<h1>Images</h1>
+				<br><br>
+				<h2>Image Gallery</h2>
+				<br>
+				<p>CSS can be used to create an image gallery.</p>
+				<br>
+				<div id="img">
+					<a target="_blank" href="">
+						<img src="" alt="" width="110" height="90">
+					</a>
+					<div id="desc">Description here.</div>
+				</div>
+				<div id="img">
+					<a target="_blank" href="">
+						<img src="" alt="" width="110" height="90">
+					</a>
+					<div id="desc">Description here.</div>
+				</div>
+				<div id="img">
+					<a target="_blank" href="">
+						<img src="" alt="" width="110" height="90">
+					</a>
+					<div id="desc">Description here.</div>
+				</div>
+				<br><br><br><br><br><br><br><br><br><br><br>
+				<h4>CSS Code:</h4>
+				<br>
+				<div id="code">
+					#img {
+						margin: 5px;
+						padding: 5px;
+						border: 1px solid #0000ff;
+						height: auto;
+						width: auto;
+						float: left;
+						text-align: center;
+					}
+					<br><br>
+					#img img {
+						display: inline;
+						margin: 5px;
+						border: 1px solid #ffffff;
+					}
+					<br><br>
+					#img a:hover img {
+						border:1px solid #0000ff;
+					}
+					<br><br>
+					#desc {
+						text-align: center;
+						font-weight: normal;
+						width: 120px;
+						margin: 5px;
+					}
+				</div>
+				<br><br>
+				<h4>HTML Implementation:</h4>
+				<br>
+				<div id="code">
+					&lt;div id=&quot;img&quot;&gt;
+						&lt;a target=&quot;_blank&quot; href=&quot;&quot;&gt;
+							&lt;img src=&quot;&quot; alt=&quot;&quot; width=&quot;110&quot; height=&quot;90&quot;&gt;
+						&lt;/a&gt;
+						<br>
+						&lt;div id=&quot;desc&quot;&gt;Description here.&lt;/div&gt;
+					&lt;/div&gt;
+				</div>
+				<br><br>
+				<h2>Image Opacity</h2>
+				<br>
+				<p>The <b>opacity</b> property is a CSS3 designation and, as the name suggests, can be used to change the opacity (or transparency) of an image.</p>
+				<br>
+				<div id="code">
+					img { opacity: 0.4; }
+				</div>
+				<br><br>
+				<h2>Image Sprites</h2>
+				<br>
+				<p>Image sprites are collections of images that are put into a single image. One main reason for using image sprites is to reduce the number of server requests for separate images.</p>
 		 </div>
 		 <!-- End Right Column -->
 		 

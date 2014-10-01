@@ -5,7 +5,62 @@
 <title>CS 3400 CSS Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
+<style>
+#div2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name: myfirst;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    /* Standard syntax */
+    animation-name: myfirst;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:200px; top:0px;}
+    50%  {background:blue; left:200px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:200px; top:0px;}
+    50%  {background:blue; left:200px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}
+
+.newspaper {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
+#div22 {
+    border: 2px solid;
+    padding: 10px 40px; 
+    width: 300px;
+    resize: both;
+    overflow: auto;
+}
+</style>
 <body>
 
    <!-- Begin Wrapper -->
@@ -47,12 +102,106 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
-			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
-			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
+		       <br>
+		       <h1>Animations</h1><br><br>
 			   
+			   <h2>Animations</h2><br>
+			   <p>CSS3 animations allows the playing of advanced animations.</p>
+			   
+			   <div id=div2>
+			   </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			   
+			   <br>
+			   <pre><div id="code">
+#div2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name: myfirst;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    /* Standard syntax */
+    animation-name: myfirst;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:200px; top:0px;}
+    50%  {background:blue; left:200px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:200px; top:0px;}
+    50%  {background:blue; left:200px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_animations.asp">Resource.</a><br><br><br>
+		 
+		 	   <h2>Columns</h2><br>
+			   <p>With CSS3, you can create multiple columns for laying out text - like in newspapers!</p><br><br>
+			   
+			   <p class="newspaper">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
+dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit 
+esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio 
+dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber 
+tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. 
+Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt 
+lectores legere me lius quod ii legunt saepius.
+</p>
+			   
+			   <br>
+			   <pre><div id="code">
+.newspaper {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_multiple_columns.asp">Resource.</a><br><br><br>
+			   
+			   <h2>User Interface</h2><br>
+			   <p>In CSS3, some of the new user interface features are resizing elements, box sizing, and outlining.</p><br><br>
+			   
+			   <div id=div22>The resize property specifies whether or not an element is resizable by the user.</div><br><br>
+			   
+			   <br>
+			   <pre><div id="code">
+#div22 {
+    border: 2px solid;
+    padding: 10px 40px; 
+    width: 300px;
+    resize: both;
+    overflow: auto;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_multiple_columns.asp">Resource.</a><br><br><br>
 		 
 		 </div>
 		 <!-- End Right Column -->

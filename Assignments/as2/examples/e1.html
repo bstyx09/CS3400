@@ -14,31 +14,32 @@
          <!-- Begin Header -->
          <div id="header">
 		 
-		       CS 3400 
-		       <br>Graphic User Interface - CSS
+		    CS 3400 
+		    <br>Graphic User Interface - CSS
 			   
 		 </div>
 		 <!-- End Header -->
 		 
 		 <!-- Begin Left Column -->
 		 <div id="leftcolumn">
+			
 		 
-			   <A HREF="../index.html">Home</A><br>
-			   <A HREF="./e1.html">Introduction</A><br>
-			   <A HREF="./e2.html">Formatting</A><br>
-			   <A HREF="./e3.html">Elements of Layouts</A><br>
-			   <A HREF="./e4.html">Layout Formatting</A><br>
-			   <A HREF="./e5.html">Selectors & Elements</A><br>
-			   <A HREF="./e6.html">Navigation Bars</A><br>
-			   <A HREF="./e7.html">Image Presentation</A><br>
-			   <A HREF="./e8.html">Media Types & Attributes</A><br><br>
-			   <h3>The following are CSS3 specific tutorials:</h3><br>
-			   <A HREF="./e9.html">CSS3: Formatting</A><br>
-			   <A HREF="./e10.html">CSS3: Transforms & Transitions</A><br>
-			   <A HREF="./e11.html">CSS3: Animations</A><br>
-			   <A HREF="./e12.html">CSS3: User Interface</A><br><br>
-			   <h3>The last tutorial concerns browser compatibility:</h3><br>
-			   <A HREF="./e13.html">Cross Browser</A><br>
+			<A HREF="../index.html">Home</A><br>
+			<A HREF="./e1.html">Introduction</A><br>
+			<A HREF="./e2.html">Formatting</A><br>
+			<A HREF="./e3.html">Elements of Layouts</A><br>
+			<A HREF="./e4.html">Layout Formatting</A><br>
+			<A HREF="./e5.html">Selectors & Elements</A><br>
+			<A HREF="./e6.html">Navigation Bars</A><br>
+			<A HREF="./e7.html">Image Presentation</A><br>
+			<A HREF="./e8.html">Media Types & Attributes</A><br><br>
+			<h3>The following are CSS3 specific tutorials:</h3><br>
+			<A HREF="./e9.html">CSS3: Formatting</A><br>
+			<A HREF="./e10.html">CSS3: Transforms & Transitions</A><br>
+			<A HREF="./e11.html">CSS3: Animations</A><br>
+			<A HREF="./e12.html">CSS3: User Interface</A><br><br>
+			<h3>The last tutorial concerns browser compatibility:</h3><br>
+			<A HREF="./e13.html">Cross Browser</A><br>
 
 
 		 </div>
@@ -47,28 +48,90 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h2>What is CSS?</h2><br>
-			  <p>- CSS stands for Cascading Style Sheets<br>- Styles are used to define how to display HTML elements
-			  <br>- Styles were originally added to HTML 4.0<br>- Using external style sheets can help save a lot of work
-			  <br>- These external style sheets are saved as CSS files</p>
-			  <br><br>
-			  <h2>How does it help?</h2>
-			  <br>
-			  <p>CSS helps to simplify HTML documents by defining how the HTML contents are displayed.
-			  <br>CSS allows for the removal of most formatting tags from an HTML document and is supported by every browser today</p>
-			  <br><br>
-			  <h2>CSS Syntax</h2><br>
-			  <p>Creating a CSS rule set requires a selector and declaration block</p><br>
-			  <img src="../images/selector.gif" alt="selector and declaration picture"><br><p><i>Image above pulled from w3schools.com</i></p><br>
-			  <br>
-			  <p>The <b>selector</b> points to the HTML element to be styled<br><br>The <b>declaration</b> block contains the elements to be styled
-			  <br><br>Declartions found in the declaration block contain a property name and value separated by a colon.
-			  Each declaration in the block is separated by a semicolon.</p><br>
-			  <pre><div id="code">
+		    <h2>What is CSS?</h2><br>
+			<p>- CSS stands for Cascading Style Sheets<br>- Styles are used to define how to display HTML elements
+			<br>- Styles were originally added to HTML 4.0<br>- Using external style sheets can help save a lot of work
+			<br>- These external style sheets are saved as CSS files</p>
+			<br><br>
+			<h2>How does it help?</h2>
+			<br>
+			<p>CSS helps to simplify HTML documents by defining how the HTML contents are displayed.
+			<br>CSS allows for the removal of most formatting tags from an HTML document and is supported by every browser today</p>
+			<br><br>
+			<h2>CSS Syntax</h2><br>
+			<p>Creating a CSS rule set requires a selector and declaration block</p><br>
+			<img src="../images/selector.gif" alt="selector and declaration picture"><br><p><i>Image above pulled from w3schools.com</i></p><br>
+			<br>
+			<p>The <b>selector</b> points to the HTML element to be styled<br><br>The <b>declaration</b> block contains the elements to be styled
+			<br><br>Declartions found in the declaration block contain a property name and value separated by a colon.
+			Each declaration in the block is separated by a semicolon.</p><br>
+			<pre><div id="code">
 	&lt;p {color:blue;text-align:center;}&gt;
-				</div></pre>
-
-		 
+			</div></pre>
+			<br><br>
+			<p>CSS can also contain comments. CSS comments are started with a &lt;* and then end with *&gt;<br><br>Here is an example:<br></p>
+			<pre><div id="code">
+	&lt;* This is a comment
+	Comments can be spread across
+	multiple lines too. *&gt; </div></pre>
+			<br><br>
+			<h2>CSS Selectors</h2>
+			<br><p>CSS Selectors are used to select and modify elements in an HTML document. CSS Selectors modify HTML elements based on their attributs, id, class, type, values of attributes, etc.</p><br>
+			<p>The following example would center align all &lt;h2&gt; elements in a page and color their text blue.</p><br>
+			<pre><div id="code">
+	h2 {
+		text-align: center;
+		color: blue;
+	}
+			</div></pre><br><br>
+			<p>CSS also allows for the selection of only specific elements to be affected by a class. using the selector <b>p.center</b> will only affect all <b>p</b> elements with class="<b>center</b>".
+			<br>Note: Class names should never be started with a number</p>
+			<br><br>
+			<h2>Grouping Selectors</h2><br>
+			<p>When it is desired to modify more than one element with the same style, they can be consolidated into one rule with each selector separated by a comma</p><br>
+			<pre><div id="code">
+	h1, h2, p {
+		text-align: center:
+		color: blue;
+	}
+	</div></pre><br><br>
+			<h2>How to Insert a CSS</h2>
+			<br>
+			<p>There are three ways to insert a style sheet<br><br>These three ways consist of:<br>an external style sheet<br>an internal style sheet<br>and inline style<br></p>
+			<hr><br>
+			<h3>External Style Sheet</h3>
+			<br><br><p>An external style sheet is useful when the style should be applied to several different pages. External style sheets can change the look of a whole website with just one file.</p>
+			<br><p>Every page that uses the style sheet should link back to the style sheet with the &lt;link&gt; tag. This tag goes in the head section of the HTML document.</p>
+			<pre><div id="code">
+	&lt;head&gt;
+	&lt;link rel="stylesheet" type="text/css" href="stylesheet.css"&gt;
+	&lt;/head&gt;
+			</div></pre>
+			<br><p>Note: All CSS files must be named with the <b>.css</b> extension.</p><br><br>
+			<hr><br>
+			<h3>Internal Style Sheet</h3>
+			<br><br><p>An internal style sheet is useful when there is only one file that should use the unique style. Internal styles are defined in the head section of an HTML document inside the &lt;style&gt; tag</p>
+			<br><p>Here is an example:</p><br>
+			<pre><div id="code">
+	&lt;head&gt;
+	&lt;style&gt;
+	body {
+		background-color: linen;
+	}
+	h1 {
+		color: blue;
+		margin-left: 40px;
+	}
+	&lt;/style&gt;
+	&lt;/head&gt;</div></pre>
+			<br><br><hr>
+			<h3>Inline Styles</h3>
+			<br><br><p>An inline style loses many of the advantages of the style sheet and should be used sparingly.<br>
+			<br>To use inline styles, add the style attribute to the relevant tag. The style attribute can contain any CSS property.<br>Here is an example:<br>
+			<pre><div id="code">
+	&lt;h2 style="color:blue;margin-left:25px;"&gt;This is the heading.&lt;/h2&gt;
+			</div></pre>
+	 
 		 </div>
 		 <!-- End Right Column -->
 		 

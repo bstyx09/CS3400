@@ -5,7 +5,20 @@
 <title>CS 3400 CSS Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
-
+<style>
+div #h21 {
+    background-color: yellow;
+}
+p::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+</style>
 <body>
 
    <!-- Begin Wrapper -->
@@ -47,12 +60,91 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
-			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
-			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
+		       <br>
+		       <h1>Selectors and Elements</h1><br><br>
 			   
+			   <h2 id=h21>Combinators</h2><br>
+			   <p>A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+				There are four different combinators in CSS3: descendant selector, child selector, adjacent sibling selector,
+				and general sibling selector</p>
+			   
+			   <br>
+			   <pre><div id="code">
+div #h21 {
+    background-color: yellow;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_combinators.asp">Resource.</a><br><br><br>
+			   
+			   
+				<h2>Psuedo-classes</h2><br>
+			   <p>A pseudo-class is used to define a special state of an element. For example, it can be used to: Style an element 
+			   when a user mouses over it. Style visited and unvisited links differently.</p>
+			   
+			   <br>
+			   <pre><div id="code">
+/* unvisited link */
+a:link {
+    color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+    color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_pseudo_classes.asp">Resource.</a><br><br><br>
+			   
+			   
+			   <h2>Pseudo-Elements</h2><br>
+			   <p>A CSS pseudo-element is used to style specified parts of an element.</p>
+			   
+			   <br>
+			   <pre><div id="code">
+p::first-line {
+    color: #ff0000;
+    font-variant: small-caps;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_pseudo_classes.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Navigation Bar</h2><br>
+			   <p>With CSS you can transform boring HTML menus into good-looking navigation bars.</p>
+			   
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+			   
+			   <br>
+			   <pre><div id="code">
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_navbar.asp">Resource.</a><br><br><br>
 		 
 		 </div>
 		 <!-- End Right Column -->

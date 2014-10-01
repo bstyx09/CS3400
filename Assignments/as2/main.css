@@ -85,3 +85,17 @@ body {
     width: 120px;
     margin: 5px;
 }
+
+#xtransform {
+	-webkit-transform: rotateX(120deg); /* Chrome, Safari, Opera */
+    transform: rotateX(120deg);
+	height: 100px;
+	width: 100px;
+}
+
+#ytransform {
+    -webkit-transform: rotateY(130deg); /* Chrome, Safari, Opera */
+    transform: rotateY(130deg);
+	height: 100px;
+	width: 100px;
+}

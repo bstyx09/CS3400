@@ -47,13 +47,125 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
+		       <h1>Transforms & Transitions</h1>
 			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
+			   <h2>Transforms</h2>
+			   <br>
+			   <p>Transforms are a CSS3 transformation effect that lets an element change shape, size and position. These transforms can be either 2D or 3D. Browsers specify support for this effect with version numbers followed by the <b>-ms-</b>, <b>-webkit-</b>, <b>-moz-</b> or <b>-o-</b> tags for IE, Chrome and Safari, Firefox and Opera respectively.</p>
 			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
-			   
-		 
+			   <h3>2D Transforms</h2>
+			   <br>
+			   <p>There are a number of 2D Transform methods, including <b>translate()</b>, <b>rotate()</b>, <b>scale()</b>, <b>skew()</b>, <b>matrix()</b>.
+			   <br><br><hr><br>
+			   The <b>translate()</b> method moves an element from its initial position in both the x and y-axis.</p>
+			   <br>
+			   <div id="code">
+					div {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ms-transform: translate(50px,100px); /* IE 9 */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transform: translate(50px,100px); /* Chrome, Safari, Opera */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform: translate(50px,100px);<br>
+					}
+			   </div>
+			   <br>
+			   <img src="../images/transform_translate.gif"></img>
+			   <br><br><hr><br>
+			   <p>The <b>rotate()</b> method rotates an element <i>clockwise</i> at the given degree. In order to rotate the element <i>counter-clockwise</i>, invoke a negative degree in the specification.</p>
+			   <br>
+			   <div id="code">
+					div {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ms-transform: rotate(30deg); /* IE 9 */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform: rotate(30deg);<br>
+					}
+			   </div>
+			   <br>
+			   <img src="../images/transform_rotate.gif"></img>
+			   <br><br><hr><br>
+			   <p>The <b>scale()</b> method either increases or decreases the scale size in terms of width and height.</p>
+			   <br>
+			   <div id="code">
+					div {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ms-transform: scale(2,4); /* IE 9 */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transform: scale(2,4); /* Chrome, Safari, Opera */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform: scale(2,4);<br>
+					}
+			   </div>
+			   <br>
+			   <img src="../images/transform_scale.gif"></img>
+			   <br><br><hr><br>
+			   <p>The <b>skew()</b> method turns in the angle specified on the horizontal and vertical axis.</p>
+			   <br>
+			   <div id="code">
+					div {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ms-transform: skew(30deg,20deg); /* IE 9 */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transform: skew(30deg,20deg); /* Chrome, Safari, Opera */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform: skew(30deg,20deg);<br>
+					}
+			   </div>
+			   <br>
+			   <img src="../images/transform_skew.gif"></img>
+			   <br><br><hr><br>
+			   <p>Finally, the <b>matrix()</b> method combines all of the other 2D methods into one. This method takes six parameters containing mathematic functions.</p>
+			   <br>
+			   <div id="code">
+					div {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ms-transform: matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transform: matrix(0.866,0.5,-0.5,0.866,0,0); /* Chrome, Safari, Opera */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform: matrix(0.866,0.5,-0.5,0.866,0,0);<br>
+					}
+			   </div>
+			   <br><br>
+			   <h3>3D Transforms</h3>
+			   <br>
+			   <p>3D transforms include the <b>rotateX()</b> and the <b>rotateY()</b> methods.</p>
+			   <br>
+			   <p>Image before a transformation:</p>
+			   <br>
+			   <img src="../images/redapple.png" style="width:100px;height:100px"></img>
+			   <br><br>
+			   <div id="code">
+					div {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transform: rotateX(120deg); /* Chrome, Safari, Opera */<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform: rotateX(120deg);<br>
+					}
+			   </div>
+			   <br>
+			   <p>...and after:</p>
+			   <br><br>
+			   <div id="xtransform">
+					<img src="../images/redapple.png" style="width:100px;height:100px"></img>
+			    </div>
+			   <br><br><hr><br>
+			   <br>
+			   <p>Image before a transformation:</p>
+			   <br>
+			   <img src="../images/redapple.png" style="width:100px;height:100px"></img>
+			   <br><br>
+			   <div id="code">
+					div {<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transform: rotateY(130deg); /* Chrome, Safari, Opera */<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transform: rotateY(130deg);<br>
+						}<br>
+			   </div>
+			   <br>
+			   <p>...and after:</p>
+			   <br><br>
+			   <div id="ytransform">
+					<img src="../images/redapple.png" style="width:100px;height:100px"></img>
+			    </div>			
+				<br><br>
+				<h2>Transitions</h2>
+				<br>
+				<p>CSS3 introduces a new feature called transitions, which allow us to add an effect when changing from one style to another, without using any Flash animations of JavaScripts.
+				<br><br>
+				In order to let an element gradually change from one style to another, you must specify both the CSS property to which you want to add an effect, and the duration of the effect.</p>
+				<br>
+				<div id="code">
+				div {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transition: width 2s;<br>
+				}
+				</div>
 		 </div>
 		 <!-- End Right Column -->
 		 

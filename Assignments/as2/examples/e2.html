@@ -5,7 +5,47 @@
 <title>CS 3400 CSS Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
+<style>
+#h23 {
+    background-color: #6495ed;
+}
 
+p.text {
+    text-transform: lowercase;
+	color: rgb(0,0,255);
+}
+
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 14px;
+}
+
+a:link {
+    color: #0033CC;
+}
+
+a:visited {
+    color: #3399FF;
+}
+
+a:hover {
+    color: #FF00FF;
+}
+
+a:active {
+    color: #0000FF;
+}
+
+table, td, th {
+    border: 1px solid green;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+</style>
 <body>
 
    <!-- Begin Wrapper -->
@@ -47,12 +87,155 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
-			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
-			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
+		       <br>
+		       <h1>Formatting</h1><br><br>
 			   
+			   <h2 id=h23>Backgrounds</h2><br>
+			   <p>CSS allows the changing of backgrounds. Users can select colors or images as a background.</p>
+			   
+			   <br>
+			   <pre><div id="code">
+h2 {
+    background-color: #6495ed;
+   }
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_background.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Text</h2><br>
+			   <p class="text">CSS text allows the changing of text colors, text decoration, and formatting.</p>
+			   
+			   <br>
+			   <pre><div id="code">
+p.text {
+    text-transform: lowercase;
+	color: rgb(0,0,255);
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_text.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Font</h2><br>
+			   <p class="serif">CSS font allows the changing of texts font, style, and size.</p>
+			   
+			   <br>
+			   <pre><div id="code">
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	font-size: 14px;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_font.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Links</h2><br>
+			   <p>CSS allows one to change the style of links throughout the page.</p>
+			   
+			   <br>
+			   <pre><div id="code">
+a:link {
+    color: #0033CC;
+}
+
+a:visited {
+    color: #3399FF;
+}
+
+a:hover {
+    color: #FF00FF;
+}
+
+a:active {
+    color: #0000FF;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_link.asp">Resource.</a><br><br><br>
+			   
+			   
+			   <h2>Lists</h2><br>
+			   <p>CSS allows one to change the style of lists throughout the page.</p><br>
+			   
+			   <p>Example of unordered lists:</p>
+<ul class="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+
+<p>Example of ordered lists:</p>
+
+<ol class="d">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+			   
+			   <br>
+			   <pre><div id="code">
+ul.a {
+    list-style-type: circle;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_list.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Tables</h2><br>
+			   <p>The look of an HTML table can be greatly improved with CSS.</p>
+			   
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+    <td>$150</td>
+  </tr>
+  <tr>
+    <td>Joe</td>
+    <td>Swanson</td>
+    <td>$300</td>
+  </tr>
+  <tr>
+    <td>Cleveland</td>
+    <td>Brown</td>
+    <td>$250</td>
+</tr>
+</table>
+			   
+			   <br>
+			   <pre><div id="code">
+table, td, th {
+    border: 1px solid green;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_table.asp">Resource.</a><br><br><br>
 		 
 		 </div>
 		 <!-- End Right Column -->

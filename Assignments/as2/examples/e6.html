@@ -5,7 +5,24 @@
 <title>CS 3400 CSS Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
+li {
+    float: left;
+}
+
+#a22 {
+    display: block;
+    width: 60px;
+    background-color: #dddddd;
+}
+</style>
 <body>
 
    <!-- Begin Wrapper -->
@@ -47,13 +64,38 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
-			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
-			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
+			   <h2>Navigation Bar</h2><br>
+			   <p>With CSS you can transform boring HTML menus into good-looking navigation bars.</p>
 			   
-		 
+<ul>
+  <li><a id=a22 href="#home">Home</a></li>
+  <li><a id=a22 href="#news">News</a></li>
+  <li><a id=a22 href="#contact">Contact</a></li>
+  <li><a id=a22 href="#about">About</a></li>
+</ul>
+			   
+			   <br>
+			   <pre><div id="code">
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+a {
+    display: block;
+    width: 60px;
+    background-color: #dddddd;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css_navbar.asp">Resource.</a><br><br>
 		 </div>
 		 <!-- End Right Column -->
 		 

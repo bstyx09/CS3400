@@ -5,7 +5,36 @@
 <title>CS 3400 CSS Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
+<style>
+#div0 {
+    border: 2px solid #a1a1a1;
+    padding: 10px 40px; 
+    background: #dddddd;
+    width: 300px;
+    border-radius: 25px;
+}
 
+#grad1 {
+    height: 200px;
+    background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, blue); /* Standard syntax (must be last) */
+}
+
+#h23 {
+    text-shadow: 5px 5px 5px #FF0000;
+}
+
+@font-face {
+   font-family: myFirstFont;
+   src: url(../images/o.woff);
+}
+
+#div11 {
+   font-family: myFirstFont;
+}
+</style>
 <body>
 
    <!-- Begin Wrapper -->
@@ -47,11 +76,83 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
-			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
-			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
+			   <h2>Rounded Borders</h2><br>
+			   <p>In CSS3, the border-radius property is used to create rounded corners.</p><br><br>
+			   
+			   <div id=div0>The border-radius property allows you to add rounded corners to elements.</div><br><br>
+			   
+			   <br>
+			   <pre><div id="code">
+div {
+    border: 2px solid #a1a1a1;
+    padding: 10px 40px; 
+    background: #dddddd;
+    width: 300px;
+    border-radius: 25px;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_borders.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Backgrounds</h2><br>
+			   <p>CSS3 contains several new background properties, which allow greater control of the background element.</p><br><br>
+
+			   
+			   <a href="http://www.w3schools.com/css/css3_backgrounds.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Gradients</h2><br>
+			   <p>To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render 
+			   smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.</p><br><br>
+			   
+			   <div id="grad1"></div>
+			   
+			   <br>
+			   <pre><div id="code">
+#grad1 {
+    height: 200px;
+    background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, blue); /* Standard syntax (must be last) */
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_gradients.asp">Resource.</a><br><br><br>
+			   
+			   <h2 id=h23>Text Effects</h2><br>
+			   <p>CSS3 contains several new text features.</p><br><br>
+			   
+			   <br>
+			   <pre><div id="code">
+h1 {
+    text-shadow: 5px 5px 5px #FF0000;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_text_effects.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Web Fonts</h2><br>
+			   <p>Web fonts allow Web designers to use fonts that are not installed on the user's computer.</p><br><br>
+			   
+			   <div id=div11>Check out this cool font!</div><br><br>
+			   
+			   <br>
+			   <pre><div id="code">
+@font-face {
+   font-family: myFirstFont;
+   src: url(../images/o.woff);
+}
+
+div {
+   font-family: myFirstFont;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_fonts.asp">Resource.</a><br><br><br>
 			   
 		 
 		 </div>

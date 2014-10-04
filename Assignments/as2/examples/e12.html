@@ -5,7 +5,39 @@
 <title>CS 3400 CSS Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
+<style>
+#div22 {
+    border: 2px solid;
+    padding: 10px 40px; 
+    width: 300px;
+    resize: both;
+    overflow: auto;
+}
 
+div.container {
+    width: 30em;
+    border: 1em solid;
+}
+
+div.box
+{
+    -moz-box-sizing: border-box; /* Firefox */
+    box-sizing: border-box;
+    width: 50%;
+    border: 1em solid red;
+    float: left;
+}
+
+#div9 {
+    margin: 20px;
+    width: 150px; 
+    padding: 10px;
+    height: 70px;
+    border: 2px solid black;
+    outline: 2px solid red;
+    outline-offset: 15px;
+} 
+</style>
 <body>
 
    <!-- Begin Wrapper -->
@@ -47,13 +79,73 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
-			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
-			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
+			   <h2>User Interface</h2><br>
+			   <p>In CSS3, some of the new user interface features are resizing elements, box sizing, and outlining.</p><br><br>
 			   
-		 
+			   <div id=div22>The resize property specifies whether or not an element is resizable by the user.</div><br><br>
+			   
+			   <br>
+			   <pre><div id="code">
+#div22 {
+    border: 2px solid;
+    padding: 10px 40px; 
+    width: 300px;
+    resize: both;
+    overflow: auto;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_user_interface.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Box Sizing</h2><br>
+			   <p>The box-sizing property is used to tell the browser what the sizing properties (width and height) should include.</p><br><br>
+			   
+			   <div class="container">
+<div class="box">This div occupies the left half.</div>
+<div class="box">This div occupies the right half.</div>
+</div>
+			   
+			   <br><br><br><br><br>
+			   <pre><div id="code">
+div.container {
+    width: 30em;
+    border: 1em solid;
+}
+
+div.box
+{
+    -moz-box-sizing: border-box; /* Firefox */
+    box-sizing: border-box;
+    width: 50%;
+    border: 1em solid red;
+    float: left;
+}
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_user_interface.asp">Resource.</a><br><br><br>
+			   
+			   <h2>Outline Offset</h2><br>
+			   <p>The outline-offset property offsets an outline, and draws it beyond the border edge.</p><br><br>
+			   
+			   <div id=div9>This div has an outline border 15px outside the border edge.</div>
+			   
+			   <br>
+			   <pre><div id="code">
+div {
+    margin: 20px;
+    width: 150px; 
+    padding: 10px;
+    height: 70px;
+    border: 2px solid black;
+    outline: 2px solid red;
+    outline-offset: 15px;
+} 
+			   </div></pre>
+			   <br>
+			   
+			   <a href="http://www.w3schools.com/css/css3_user_interface.asp">Resource.</a><br><br><br>
 		 </div>
 		 <!-- End Right Column -->
 		 

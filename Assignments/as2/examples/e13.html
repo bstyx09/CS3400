@@ -47,11 +47,34 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 CSS Project</h1>
+		       <h1>Cross Browser and Device Techniques</h1>
 			   <br><br>
-			   <p>The purpose of this project is to learn and understand best CSS practices in its own context. Through expressing CSS examples, standards and tools in a fully functional HTML site, we practice as we learn.
+			   <p>There is a wide variety of devices that can be used to access internet content, and many of those devices have smaller screens. Traditional layouts for larger computer screens often do not translate well to a smaller screen, leading to headaches when trying to present content in a uniform manner to more than one platform. Fortunately, there are a few different ways CSS can help.</p>
 			   <br><br>
-			   <b>NOTE:</b> This project has been drawn extensively from <a href="http://www.w3schools.com/css/">w3Schools.com</a> for design philosophy and code examples under the fair use license for educational purposes. We believe this complies with the educational fair use guidelines that are provided by the Copyright Office and are found <a href="http://www.copyright.gov/circs/circ21.pdf">here</a>.</p>
+			   <h2>Media Queries</h2>
+			   <br>
+			   <p>Media queries are queries from the server to the local browser to determine information that allow the server to determine the best method to present the internet content to the platform or browser in question.
+			   <br><br>
+			   One example of this is to test the device width.</p>
+			   <br><br>
+			   <div id="code">
+					&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (min-device-width: 800px)&quot; href=&quot;800.css&quot; /&gt;
+			   </div>
+			   <br>
+			   <p>The above uses the '800.css' stylesheet only if the viewing device has a width of 800px or wider.
+			   <br><br>
+			   Another method of doing this is to test for the browser width instead of the device width. After all, browser windows are not always maximized to the full screen dimensions. This is called testing for the 'viewport.'</p>
+			   <br>
+			   <div id="code">
+					&lt;link rel='stylesheet' media='screen and (min-width: 701px) and (max-width: 900px)' href='css/medium.css' /&gt;
+			   </div>
+			   <br>
+			   <p>The above stylesheet only takes affect when the browser window is between 701 and 900 pixels in width.
+			   <br><br>
+			   The browsers that support media queries include IE 9+, Firefox 3.6+, Chrome and Opera 10+.
+			   <br><br>
+			   The source for this information is at <a href="http://css-tricks.com/resolution-specific-stylesheets/">css-tricks.com</a>.
+			   </p>
 			   
 		 
 		 </div>

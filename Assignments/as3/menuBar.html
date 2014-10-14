@@ -45,6 +45,99 @@ function mcancelclosetime()
 	}
 }
 
+function myFunction(line)
+{
+	document.getElementById("textArea").value += line;
+}
+
+function myFunction1(id)
+{
+	if(id == "1")
+	{
+		document.getElementById("textArea").value += 'Changed to State 1 \r\n';
+		document.getElementById("s1").style.background = '#000000';
+		document.getElementById("s1").style.color = '#848484';
+		document.getElementById("s2").style.background = '#000000';
+		document.getElementById("s2").style.color = '#848484';
+		document.getElementById("s4").style.background = '#000000';
+		document.getElementById("s4").style.color = '#848484';
+		document.getElementById("s5").style.background = '#000000';
+		document.getElementById("s5").style.color = '#848484';
+		
+		document.getElementById("s3").style.background = '#EAEBD8';
+		document.getElementById("s3").style.color = '#2875DE';
+		document.getElementById("s6").style.background = '#EAEBD8';
+		document.getElementById("s6").style.color = '#2875DE';
+		document.getElementById("s7").style.background = '#EAEBD8';
+		document.getElementById("s7").style.color = '#2875DE';
+		document.getElementById("s8").style.background = '#EAEBD8';
+		document.getElementById("s8").style.color = '#2875DE';
+		document.getElementById("s9").style.background = '#EAEBD8';
+		document.getElementById("s9").style.color = '#2875DE';
+		document.getElementById("s10").style.background = '#EAEBD8';
+		document.getElementById("s10").style.color = '#2875DE';
+		document.getElementById("s11").style.background = '#EAEBD8';
+		document.getElementById("s11").style.color = '#2875DE';
+		document.getElementById("s12").style.background = '#EAEBD8';
+		document.getElementById("s12").style.color = '#2875DE';
+	}else if (id == "2")
+	{
+		document.getElementById("s3").style.background = '#000000';
+		document.getElementById("s3").style.color = '#848484';
+		document.getElementById("s6").style.background = '#000000';
+		document.getElementById("s6").style.color = '#848484';
+		document.getElementById("s7").style.background = '#000000';
+		document.getElementById("s7").style.color = '#848484';
+		document.getElementById("s8").style.background = '#000000';
+		document.getElementById("s8").style.color = '#848484';
+		
+		document.getElementById("s1").style.background = '#EAEBD8';
+		document.getElementById("s1").style.color = '#2875DE';
+		document.getElementById("s2").style.background = '#EAEBD8';
+		document.getElementById("s2").style.color = '#2875DE';
+		document.getElementById("s4").style.background = '#EAEBD8';
+		document.getElementById("s4").style.color = '#2875DE';
+		document.getElementById("s5").style.background = '#EAEBD8';
+		document.getElementById("s5").style.color = '#2875DE';
+		document.getElementById("s9").style.background = '#EAEBD8';
+		document.getElementById("s9").style.color = '#2875DE';
+		document.getElementById("s10").style.background = '#EAEBD8';
+		document.getElementById("s10").style.color = '#2875DE';
+		document.getElementById("s11").style.background = '#EAEBD8';
+		document.getElementById("s11").style.color = '#2875DE';
+		document.getElementById("s12").style.background = '#EAEBD8';
+		document.getElementById("s12").style.color = '#2875DE';
+	}else
+	{
+		document.getElementById("s9").style.background = '#000000';
+		document.getElementById("s9").style.color = '#848484';
+		document.getElementById("s10").style.background = '#000000';
+		document.getElementById("s10").style.color = '#848484';
+		document.getElementById("s11").style.background = '#000000';
+		document.getElementById("s11").style.color = '#848484';
+		document.getElementById("s12").style.background = '#000000';
+		document.getElementById("s12").style.color = '#848484';
+		
+		document.getElementById("s3").style.background = '#EAEBD8';
+		document.getElementById("s3").style.color = '#2875DE';
+		document.getElementById("s6").style.background = '#EAEBD8';
+		document.getElementById("s6").style.color = '#2875DE';
+		document.getElementById("s7").style.background = '#EAEBD8';
+		document.getElementById("s7").style.color = '#2875DE';
+		document.getElementById("s8").style.background = '#EAEBD8';
+		document.getElementById("s8").style.color = '#2875DE';
+		document.getElementById("s1").style.background = '#EAEBD8';
+		document.getElementById("s1").style.color = '#2875DE';
+		document.getElementById("s2").style.background = '#EAEBD8';
+		document.getElementById("s2").style.color = '#2875DE';
+		document.getElementById("s4").style.background = '#EAEBD8';
+		document.getElementById("s4").style.color = '#2875DE';
+		document.getElementById("s5").style.background = '#EAEBD8';
+		document.getElementById("s5").style.color = '#2875DE';
+	}
+}
+
+
 // close layer when click-out
 document.onclick = mclose; 
 </script>
@@ -102,54 +195,63 @@ document.onclick = mclose;
 </style>
 </head>
 <body>
-
-   <!-- Begin Wrapper -->
-   <div id="wrapper">
-   
-         <!-- Begin Header -->
-         <div id="header">
-		 
-		       CS 3400 
-			   <br>Javascript
-			   
-		 </div>
-		 <!-- End Header -->
 		 
 		 
-		 <div>
+<div>
 		 
-		 <ul id="sddm">
+<ul id="sddm">
     <li><a href="#" 
         onmouseover="mopen('m1')" 
-        onmouseout="mclosetime()">Home</a>
+        onmouseout="mclosetime()">File</a>
         <div id="m1" 
             onmouseover="mcancelclosetime()" 
             onmouseout="mclosetime()">
-        <a href="#">HTML/CSS</a>
-        <a href="#">DHTML Menu</a>
-        <a href="#">JavaScript</a>
+        <a href="#" id="s1" onclick="myFunction('Clicked New \r\n')">New</a>
+        <a href="#" id="s2" onclick="myFunction('Clicked Open \r\n')">Open</a>
+        <a href="#" id="s3" onclick="myFunction('Clicked Save \r\n')">Save</a>
         </div>
     </li>
     <li><a href="#" 
         onmouseover="mopen('m2')" 
-        onmouseout="mclosetime()">Download</a>
+        onmouseout="mclosetime()">Edit</a>
         <div id="m2" 
             onmouseover="mcancelclosetime()" 
             onmouseout="mclosetime()">
-        <a href="#">ASP Server-side</a>
-        <a href="#">Pulldown navigation</a>
-        <a href="#">AJAX Drop Submenu</a>
-        <a href="#">DIV Cascading </a>
+        <a href="#" id="s4" onclick="myFunction('Clicked Undo \r\n')">Undo</a>
+        <a href="#" id="s5" onclick="myFunction('Clicked Redo \r\n')">Redo</a>
+        <a href="#" id="s6" onclick="myFunction('Clicked Cut \r\n')">Cut</a>
+        <a href="#" id="s7" onclick="myFunction('Clicked Copy \r\n')">Copy</a>
+		<a href="#" id="s8" onclick="myFunction('Clicked Paste \r\n')">Paste</a>
         </div>
     </li>
-    <li><a href="#">Order</a></li>
-    <li><a href="#">Help</a></li>
-    <li><a href="#">Contact</a></li>
+        <li><a href="#" 
+        onmouseover="mopen('m3')" 
+        onmouseout="mclosetime()">Help</a>
+        <div id="m3" 
+            onmouseover="mcancelclosetime()" 
+            onmouseout="mclosetime()">
+        <a href="#" id="s9" onclick="myFunction('Clicked Settings \r\n')">Settings</a>
+        <a href="#" id="s10" onclick="myFunction('Clicked About \r\n')">About</a>
+        <a href="#" id="s11" onclick="myFunction('Clicked Legal \r\n')">Legal</a>
+        <a href="#" id="s12" onclick="myFunction('Clicked FAQ \r\n')">FAQ</a>
+        </div>
+    </li>
 </ul>
 <div style="clear:both"></div>
 		 
 		 </div>
-		 <br><br><br><br><br><br><br><br><br><br>
+		 <br><br>
+		 
+<form>
+<input type="radio" name="s" value="state1" onclick="myFunction1('1')">State 1<br><br>
+<input type="radio" name="s" value="state2" onclick="myFunction1('2')">State 2<br><br>
+<input type="radio" name="s" value="stste3" onclick="myFunction1('3')">State 3<br><br>
+</form>
+
+<br><br>
+
+<textarea rows="10" cols="25" id="textArea"></textarea>
+
 		 <!-- Begin Footer -->
 		 <div id="footer">
 		       

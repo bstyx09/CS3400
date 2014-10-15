@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>CS 3400 Javascript Project</title>
+<title>CS 3400 JavaScript Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
 
@@ -15,7 +15,7 @@
          <div id="header">
 		 
 		       CS 3400 
-			   <br>Javascript
+			   <br>JavaScript
 			   
 		 </div>
 		 <!-- End Header -->
@@ -24,7 +24,6 @@
 		 <div id="leftcolumn">
 		 
 			   <A HREF="../index.html">Home</A><br><br>
-			   <h4>Javascript Topics:</h4><br>
 			   <A HREF="../topics/locations.html" style="padding-left:1em">Standard Locations</A><br>
 			   <A HREF="../topics/standards.html" style="padding-left:1em">Programming Standards</A><br>
 			   <A HREF="../topics/tutorials.html" style="padding-left:1em">Tutorials</A><br>
@@ -36,9 +35,6 @@
 			   <A HREF="../topics/access.html" style="padding-left:1em">Local File Access</A><br>
 			   <A HREF="../topics/jquery.html" style="padding-left:1em">JQuery</A><br>
 			   <A HREF="../topics/canvas.html" style="padding-left:1em">Canvas</A><br>
-			   <A HREF="../topics/canvas/kineticjs.html" style="padding-left:2em">Kinetic.js</A><br>
-			   <A HREF="../topics/canvas/kineticjs.html" style="padding-left:2em">Fabric.js</A><br>
-			   <A HREF="../topics/canvas/kineticjs.html" style="padding-left:2em">Easel.js</A><br>
 			   <A HREF="../topics/dragdrop.html" style="padding-left:1em">Drag and Drop</A><br>
 			   <A HREF="../topics/webgl.html" style="padding-left:1em">WebGL</A><br>
 			   <A HREF="../topics/security.html" style="padding-left:1em">Security</A><br>
@@ -51,10 +47,71 @@
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>CS3400 Javascript Project</h1>
-			   <br><br>
-			   <p>This page will include some notable uses for Javascript, including forms and their submission, and the Canvas.</p>
-		 
+		       <h1>Standards and Best Practices</h1>
+			   <br>
+			   <h2>Avoid Global Variables</h2>
+			   <br>
+			   <p>Global variables and functions can be overwritten by other scripts, so generally local variables with closures are preferred. To that end, always declare local variables with the <b>var</b> keyword.</p>
+			   <br>
+			   <h2>Primitives vs. Objects</h2>
+			   <br>
+			   <p>Numbers, strings and booleans are primitive values in JavaScript. As such, they should not be declared as objects. Doing so is inefficient and can lead to unintended side effects.</p>
+			   <br>
+			   <div id="code">
+			   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = &quot;hello&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Correct primitive value declaration<br>
+			   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var y = new String(&quot;hello&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Incorrect primitive declaration as object
+			   </div>
+			   <br>
+			   <p>Furthermore, when declaring primitive variables and objects, don't use the <b>new</b> identifier. Instead, follow the following list:</p>
+			   <br>
+			   <ul>
+					<li>Use {} instead of new Object()</li>
+					<li>Use "" instead of new String()</li>
+					<li>Use 0 instead of new Number()</li>
+					<li>Use false instead of new Boolean()</li>
+					<li>Use [] instead of new Array()</li>
+					<li>Use /(:)/ instead of new RegExp()</li>
+					<li>Use function (){} instead of new function()</li>
+				</ul>
+				<br>
+				<div id="code">
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x1 = {};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           // new object<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x2 = &quot;&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           // new primitive string<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x3 = 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            // new primitive number<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x4 = false;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        // new primitive boolean<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x5 = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           // new array object<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var	x6 = /()/;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         // new regexp object<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x7 = function(){};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // new function object
+				
+				</div>
+				<br>
+				<p>Finally, keep in mind that JavaScript is loosely typed, and so variables can be assigned different data types and be correct within the lexical framework of JavaScript.</p>
+				<br>
+				<div id="code">
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = &quot;hello&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     // typeof x is a string<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               // changes typeof x to a number
+				
+				</div>
+				<br>
+				<h2>Use === Comparison</h2>
+				<br>
+				<p>The <b>===</b> operator will force the comparison of values and type, whereas the preferably avoided <b>==</b> operator will always convert the expression to uniform data types before the comparison.</p>
+				<br>
+				<h2>Parameter Defaults</h2>
+				<br>
+				<p>Calling a function without all of the defined arguments sets the missing arguments to <b>undefined</b>, which can do bad things within the function. This behavior can be caught in some error checking which assigns default values to arguments:</p>
+				<br>
+				<div id="code">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function myFunction(x, y) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	if (y === undefined) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		y = 0;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	}<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+				
+				</div>
+				
 		 </div>
 		 <!-- End Right Column -->
 		 

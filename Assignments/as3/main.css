@@ -1,16 +1,10 @@
-/*
-      Created by Keith Donegan of Code-Sucks.com
-	  
-	  E-Mail: Keithdonegan@gmail.com
-	  
-	  You can do whatever you want with these layouts,
-	  but it would be greatly appreciated if you gave a link
-	  back to http://www.code-sucks.com
-	  
-*/
-
 * { padding: 0; margin: 0; }
 
+a, a:visited {
+	color:#0F0F83;
+	font-weight:bold;
+	text-decoration:none;
+}
 body {
  font-family: Arial, Helvetica, sans-serif;
  font-size: 13px;
@@ -67,4 +61,9 @@ body {
  background: #F8F8FF;
  border: black dashed 1px;
  padding: 6px;
+ margin: 0em 3em 0em 3em;
+}
+
+ul {
+	margin: 0em 0em 0em 3em;
 }

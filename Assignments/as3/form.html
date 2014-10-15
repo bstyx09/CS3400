@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
-<body>
+<body onload="loadFunction()">
 
    <!-- Begin Wrapper -->
    <div id="wrapper">
@@ -35,23 +35,52 @@
 		       
 		        <h1>CS3400 Javascript Project</h1>
 			    <br><br>
-			    <form action="cgi-bin/formmail.pl" onsubmit="return checkForm()" method="post">
-					Name: <input type="text" name="name" value="" size="25" maxlength="50" /><br><br>
-					Email:  <input type="text" name="email" value="" size="25" maxlength="50" /><br><br>
-					Phone: <input type="text" name="phone" value="" size="13" maxlength="40" /><br><br>
-					Color: <input list="colors" name="color">
+					Name: <input type="text" id="name" value="" size="25" maxlength="50" onblur='nameCheck()'/><br><br>
+					Email:  <input type="text" id="email" value="" size="25" maxlength="50" onblur='emailCheck()'/> <p id = "emailField"></p><br><br>
+					Phone: <input type="text" id="phone" value="" size="13" maxlength="40" onblur='phoneCheck()'/> <p id = "phoneField"></p><br><br>
+					Color: <input list="colors" id="color">
 					<datalist id="colors">
 						<option value="brown">
 						<option value="gold">
 						<option value="green">
 						<option value="white">
 					</datalist><br><br>
-					<input type="submit" name="submit" value="Submit" />
-				</form>
+					<input type="button" id="submit" value="Submit" onclick="checkForm()"/>   <input type="button" id="cancel" value="Cancel" onclick="clearForm()"/>
 				
 				<script>
+				function loadFunction(){
+					document.getElementById("email").style.visibility="hidden";
+					document.getElementById("phone").style.visibility="hidden";
+					document.getElementById("color").style.visibility="hidden";
+					document.getElementById("submit").disabled = true;
+				}
 				function checkForm(){
 					
+				}
+				function clearForm(){
+					document.getElementById("name").value = "";
+					document.getElementById("email").value = "";
+					document.getElementById("phone").value = "";
+					document.getElementById("color").value = "";
+					document.getElementById("email").style.visibility="hidden";
+					document.getElementById("phone").style.visibility="hidden";
+					document.getElementById("color").style.visibility="hidden";
+					document.getElementById("submit").disabled = true;
+				}
+				function nameCheck(){
+					document.getElementById("email").style.visibility="visible";
+				}
+				function emailCheck(){
+					var email = document.getElementById("email").value;
+					if(email.slice(-4) == ".com"){
+						document.getElementById("phone").style.visibility="visible";
+					} else{
+						document.getElementById("emailField").innerHTML = "email is in incorrect format";
+					}
+				}
+				function phoneCheck(){
+					document.getElementById("color").style.visibility="visible";
+					document.getElementById("submit").disabled = false;
 				}
 				</script>
 		 

@@ -39,7 +39,7 @@
 			   <A HREF="./topics/webgl.html" style="padding-left:1em">WebGL</A><br>
 			   <A HREF="./topics/security.html" style="padding-left:1em">Security</A><br>
 			   <br><A HREF="./form.html">Form</A><br>
-			   <br><A HREF="./form2.html">Form2</A><br>
+			   <A HREF="./form2.html">Form2</A><br>
 			   <A HREF="./menuBar.html">Menu Bar</A><br>
 			   <A HREF="./examples.html">Examples</A><br>
 			   
@@ -51,9 +51,9 @@
 		       
 		        <h1>JavaScript Form</h1>
 			    <br><br>
-					Name: <input type="text" id="name" value="" size="25" maxlength="50" onchange='nameCheck()'/><br><br>
+					Name: <input type="text" id="name" value="" size="25" maxlength="50" onblur='nameCheck()'/><br><br>
 					Email:  <input type="text" id="email" value="" size="25" maxlength="50" onchange='emailCheck()'/> <p id = "emailField"></p><br><br>
-					Phone: <input type="text" id="phone" value="" size="13" maxlength="40" onchange='phoneCheck()'/> <p id = "phoneField"></p><br><br>
+					Phone: <input type="text" id="phone" value="" size="13" maxlength="40" onblur='phoneCheck()'/> <p id = "phoneField"></p><br><br>
 					Color: <input list="colors" id="color">
 					<datalist id="colors">
 						<option value="brown">
@@ -65,9 +65,9 @@
 				
 				<script>
 				function loadFunction(){
-					document.getElementById("email").style.visibility="hidden";
-					document.getElementById("phone").style.visibility="hidden";
-					document.getElementById("color").style.visibility="hidden";
+					document.getElementById("email").disabled = true;
+					document.getElementById("phone").disabled = true;
+					document.getElementById("color").disabled = true;
 					document.getElementById("submit").disabled = true;
 				}
 				function checkForm(){
@@ -78,24 +78,24 @@
 					document.getElementById("email").value = "";
 					document.getElementById("phone").value = "";
 					document.getElementById("color").value = "";
-					document.getElementById("email").style.visibility="hidden";
-					document.getElementById("phone").style.visibility="hidden";
-					document.getElementById("color").style.visibility="hidden";
+					document.getElementById("email").disabled = true;
+					document.getElementById("phone").disabled = true;
+					document.getElementById("color").disabled = true;
 					document.getElementById("submit").disabled = true;
 				}
 				function nameCheck(){
-					document.getElementById("email").style.visibility="visible";
+					document.getElementById("email").disabled = false;
 				}
 				function emailCheck(){
 					var email = document.getElementById("email").value;
 					if(email.slice(-4) == ".com"){
-						document.getElementById("phone").style.visibility="visible";
+						document.getElementById("phone").disabled = false;
 					} else{
 						document.getElementById("emailField").innerHTML = "email is in incorrect format";
 					}
 				}
 				function phoneCheck(){
-					document.getElementById("color").style.visibility="visible";
+					document.getElementById("color").disabled = false;
 					document.getElementById("submit").disabled = false;
 				}
 				</script>

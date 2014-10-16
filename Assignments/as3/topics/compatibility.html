@@ -38,19 +38,46 @@
 			   <A HREF="../topics/dragdrop.html" style="padding-left:1em">Drag and Drop</A><br>
 			   <A HREF="../topics/webgl.html" style="padding-left:1em">WebGL</A><br>
 			   <A HREF="../topics/security.html" style="padding-left:1em">Security</A><br>
-			   <br><A HREF="../form.html">Form</A><br>
-			   <A HREF="../menuBar.html">Menu Bar</A><br>
-			   <A HREF="../examples.html">Examples</A><br>
+			   <A HREF="../form.html" style="padding-left:1em">Form 1</A><br>
+			   <A HREF="../form2.html" style="padding-left:1em">Form 2</A><br>
+			   <A HREF="../menuBar.html" style="padding-left:1em">Menu Bar</A><br>
 		 </div>
 		 <!-- End Left Column -->
 		 
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>Browser Compatibility</h1>
-			   <br><br>
-			   <p></p>
-		 
+				<h1>Browser Compatibility</h1>
+				<br><br>
+				<p>While all major browsers support JavaScript, they do so to varying degrees, and in different ways. As a result, a piece of JavaScript code that may work fine in one browser might do nothing in another. As a result, developers should do several things when writing code:</p>
+				<br>
+				<ol>
+					<li>Check which browsers support the functions and libraries you are using. A fantastic resource for this is <a href="http://kangax.github.io/compat-table/es5/">this compatibility table</a>, referenced from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla">Mozilla's excellent web developer resource</a>.</li><br>
+					<li>Check to ensure that your code only executes on browsers with full function support. There are a number of ways this can be done. The first involves checking for which browser is being used, then handle each instance separately.
+					<br><br>
+					<div id="code">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (navigator.userAgent.indexOf(&quot;MSIE 8&quot;) &gt; -1) {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// do IE8 stuff<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// do non IE8 stuff<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+					</div>
+					<br>
+					Unfortunately, the user agent strings tend to not be stable, and besides, the method itself is too static to really be considered good design, as the code would have to be modified, or at least tested, against every likely browser version. Anyone running something unanticipated might encounter some nasty results.
+					<br><br>
+					Fortunately, there is another method that involves testing whether or not the browser supports the feature in question. As a result, instead of running tests for a number of different browsers, <a href="https://www.tinfoilsecurity.com/blog/cross-browser-development-tips-javascript">one simple if else test</a> to check for function support follows:
+					<br><br>
+					<div id="code">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (typeof console === &quot;undefined&quot; || typeof console.log === &quot;undefined&quot;) {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// do nothing, or use an alternative like 'alert()'<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// use console.log without worry<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+					</div>
+					</li><br>
+					<li>Finally, there are tools available, both free and paid, that will check your own code for compatibility with different browsers, much like an HTML validator. One of the free ones available to use include <a href="http://browsershots.org/">Browser Shots</a>.
 		 </div>
 		 <!-- End Right Column -->
 		 

@@ -38,18 +38,35 @@
 			   <A HREF="../topics/dragdrop.html" style="padding-left:1em">Drag and Drop</A><br>
 			   <A HREF="../topics/webgl.html" style="padding-left:1em">WebGL</A><br>
 			   <A HREF="../topics/security.html" style="padding-left:1em">Security</A><br>
-			   <br><A HREF="../form.html">Form</A><br>
-			   <A HREF="../menuBar.html">Menu Bar</A><br>
-			   <A HREF="../examples.html">Examples</A><br>
+			   <A HREF="../form.html" style="padding-left:1em">Form 1</A><br>
+			   <A HREF="../form2.html" style="padding-left:1em">Form 2</A><br>
+			   <A HREF="../menuBar.html" style="padding-left:1em">Menu Bar</A><br>
 		 </div>
 		 <!-- End Left Column -->
 		 
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
 		       
-		       <h1>Embedded Browsers</h1>
-			   <br><br>
-			   <p></p>
+				<h1>Embedded Browsers</h1>
+				<br><br>
+				<p>HTML 5 now supports and will validate with the <b>&lt;embed&gt;</b> tag. All major browsers IE, Chrome, Firefox, Safari and Opera all support it as well. <b>&lt;embed&gt;</b> objects are often used to embed JavaScript, and as such, also support event attributes such as <b>window events</b>, <b>form events</b>, <b>keyboard events</b> and <b>mouse events</b>. 
+				<br><br>
+				<b>&lt;embed&gt;</b> objects can be created and accessed like so:</p>
+				<br>
+				<div id="code">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = document.createElement(&quot;EMBED&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// create &lt;embed&gt; element<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = document.getElementById(&quot;EMBED&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// access &lt;embed&gt; element
+				</div>
+				<br>
+				<h3>Embed Object Properties</h2>
+				<br>
+				<p>The four properties of &lt;embed&gt; objects include <b>height</b>, <b>src</b>, <b>type</b> and <b>width</b>. These properties either set or return the value of their respective namesake. By default, the CSS styling of &lt;embed&gt; elements are as follows:</p>
+				<br>
+				<div id="code">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;embed:focus {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outline: none;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+				</div>
 		 
 		 </div>
 		 <!-- End Right Column -->

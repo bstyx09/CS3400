@@ -48,8 +48,12 @@
 		 <div id="rightcolumn">
 		       
 		       <h1>Security</h1>
-
-		 
+			   <br><br>
+			   <p>JavaScript has a history of security issues that are well documented on <a href="http://en.wikipedia.org/wiki/JavaScript#Security">Wikipedia</a>. At the core of the security issues is that JavaScript and the DOM (Document Object Model) have the potential of allowing malicious scripts to run on a user's computer from the internet. 
+			   <br><br>Responsible programmers can contain this risk by running their scripts in a "sandbox" within which the scripts can only run internet specific operations instead of more general purpose (and easily abused) actions. More generally, a <a href="http://en.wikipedia.org/wiki/Sandbox_(computer_security)">sandbox</a> is a control mechanism that separates running programs for safety. 
+			   <br><br>The <a href="http://en.wikipedia.org/wiki/Same-origin_policy">same origin policy</a> is the second constraint that can maintain a secure scripting environment. That policy states that scripts from one site cannot access information from another site. 
+			   <br><br>When either or both of these constraints are not followed, the JavaScript is vulnerable to malicious behavior. There are a few JavaScript subsets that are more strongly focused on security than general JavaScript, including <a href="http://www.adsafe.org/">ADsafe</a> and Secure ECMA Script. Finally, there is a W3C candidate group called <a href="http://en.wikipedia.org/wiki/Content_Security_Policy">Content Security Policy</a> that strives to provide a standard HTTP header to help declare approved sources of content.</p>
+			   
 		 </div>
 		 <!-- End Right Column -->
 		 

@@ -64,12 +64,39 @@ function drop(ev) {
 		       
 		       <h1>Drag and Drop</h1>
 			   <br><br>
-			   <p>Drag and drop the Velociraptor and try to forget that Jurassic Park may be entirely feasible in your lifetime!</p>
+			   <p>Drag and drop the Velociraptor into one of the two boxes below!</p>
 			   <br><br><br>
 			   <img id="raptor" ondragstart="drag(event)" src="../images/Velociraptor.png">
 			   <br><br>
 			   <div id="raptor2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 			   <div id="raptor2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			   <p>The code follows for the HTML elements:</p>
+			   <br>
+			   <div id="code">
+				   &lt;img id=&quot;raptor&quot; ondragstart=&quot;drag(event)&quot; src=&quot;../images/Velociraptor.png&quot;&gt;<br><br>
+				   &lt;div id=&quot;raptor2&quot; ondrop=&quot;drop(event)&quot; ondragover=&quot;allowDrop(event)&quot;&gt;&lt;/div&gt;<br><br>
+				   &lt;div id=&quot;raptor2&quot; ondrop=&quot;drop(event)&quot; ondragover=&quot;allowDrop(event)&quot;&gt;&lt;/div&gt;<br>	
+			   </div>
+			   <br><br>
+			   <p>And the code for the Javascript itself:</p>
+			   <br>
+			   <div id="code">
+					function allowDrop(ev) {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
+					}<br><br>
+
+					function drag(ev) {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ev.dataTransfer.setData(&quot;text/html&quot;, ev.target.id);<br>
+					}<br><br>
+
+					function drop(ev) {<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ev.preventDefault();<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var data = ev.dataTransfer.getData(&quot;text/html&quot;);<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ev.target.appendChild(document.getElementById(data));<br>
+					}
+			   </div>
+
 		 
 		 </div>
 		 <!-- End Right Column -->

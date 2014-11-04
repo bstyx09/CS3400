@@ -5,7 +5,46 @@
 <title>CS 3400 JavaScript Project</title>
 <link rel="stylesheet" type="text/css" href="../main.css" />
 </head>
-
+<style>
+p.tnr {
+    font-family: "Times New Roman", Times, serif;
+	font-size: 1em;
+}
+p.geo {
+    font-family: Georgia, serif;
+	font-size: 1em;
+}
+p.ari {
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+p.cms {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 1em;
+}
+p.cnw {
+    font-family: "Courier New", Courier, monospace;
+	font-size: 1em;
+}
+p.lcs {
+    font-family: "Lucida Console", Monaco, monospace;
+	font-size: 1em;
+}
+@font-face {
+   font-family: myFirstFont;
+   src: url(../images/o.woff);
+}
+p.cool {
+   font-family: myFirstFont;
+}
+@media print {
+    p {
+		font-family: "Times New Roman", Times, serif;
+        font-size: 1em;
+        color: red;
+    }
+}
+</style>
 <body>
 
    <!-- Begin Wrapper -->
@@ -35,8 +74,108 @@
 		 </div>
 		 <!-- End Left Column -->
 		 
-		 <!-- Begin Right Column -->
+		 <!-- Begin Right Column 
+		 2.      Fonts
+			a.      Art
+			b.      Cross platform
+			c.      Readability
+			d.      Size (normal usage and special needs)
+			e.      Scaling-->
 		 <div id="rightcolumn">
+		 <h1>Fonts</h1><br>
+		 <p>Font is a very important, and often overlooked aspect of user interface design. It is important
+		 to select fonts that are both pleasing to the eye and easy to read. Continue reading for a more advanced
+		 look at fonts and how they can effect design.</p><br>
+		 
+		 <h2>The Art of the Font</h2>
+		 <p>There are two main styles of fonts available for use, serif and sans-serif. Serif fonts include small lines at 
+		 the ends of some characters. Below is a picture the helps distinguish the difference between the two:</p><br>
+		 <img src="../images/fonts.png" alt="fonts" style="width:430px;height:154px"><br>
+		 <p>It is generally accepted that sans-serif fonts are easier to read on the web.</p><br>
+		 <p>Another type of font is the monospace font. Here, each character takes up the same amount of space. Monospace 
+		 fonts are the best choice for development or displaying code.</p><br>
+		 <p>Below are some examples of each type of font.</p><br>
+		 
+		 <p class="tnr">Times New Roman, a serif font.</p>
+		 <p class="geo">Georgia, a serif font.</p><br>
+		 <p class="ari">Arial,a sans-serif font.</p>
+		 <p class="cms">Comic Sans, a generally disrespected sans-serif font. </p><br>
+		 <p class="cnw">Courier New, a monospace font.</p>
+		 <p class="lcs">Lucida Console, a monospace font.</p><br>
+
+		 
+		 <h2>Font Cross Platform Compatibility</h2>
+		 <p><A HREF="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3C</A> provides a list of web safe fonts. These are fonts
+		 that are recognized are cross-browser compatible across the vast majority of browsers.</p><br>
+		 
+		 <p>With the introduction of CSS3 came Web fonts. Web fonts allow Web designers to use fonts that are not installed on the user's computer.</p><br>
+			   
+		 <p class="cool">Check out this cool font!</p><br>
+			   
+			 
+		 <pre><div id="code">
+@font-face {
+   font-family: myFirstFont;
+   src: url(../images/o.woff);
+}
+
+p {
+   font-family: myFirstFont;
+}
+			   </div></pre><br>
+		 
+		 <h2>Font Readability</h2>
+		 <p>As mentioned, sans-serif fonts are generally easier to read on web and mobile devices than serif fonts. However, serif fonts 
+		 are usually preferred when printing a hard copy of a document. Luckily CSS allows the changing of attributes based on whether the 
+		 media is a screen or print. Go ahead, look at the print preview for this page! </p><br>
+		 
+		 		 <pre><div id="code">
+@media print {
+    p {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1em;
+	color: red;
+    }
+}
+			   </div></pre><br>
+		 
+		 <h2>Font Size, Accessibility and Scaling</h2>
+		 <p>The font-size property sets the size of the text. Being able to manage the text size is important in web design. 
+		 However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs.
+		 Always use the proper HTML tags for headings and for paragraphs. The font-size value can be an absolute, or relative size.</p><br>
+		 
+		 <h4>Absolute size:</h4>
+
+		<p>Sets the text to a specified size. Does not allow a user to change the text size in all browsers (bad for accessibility reasons)
+		Absolute size is useful when the physical size of the output is known.</p><br>
+
+		<h4>Relative size:</h4>
+
+		<p>Sets the size relative to surrounding elements.
+		Allows a user to change the text size in browsers.</p><br>
+		
+		<h4>Scaling:</h4>
+		<p>The best way to Scale text is by using Em. This allows re-scaling of the text in browser, and is supported in all modern browsers.
+		An example of how to do this is below.</p><br>
+		
+		<pre><div id="code">
+body {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.875em;
+}
+
+p {
+    font-size: 0.875em;
+}
+			   </div></pre><br>
+		 
 		 </div>
 		 <!-- End Right Column -->
 		 

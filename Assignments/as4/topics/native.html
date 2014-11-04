@@ -37,6 +37,43 @@
 		 
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
+		 
+		 <h1>Native Application Web Apps</h1><br>
+		 <p>Often times, it is useful to be able to simulate the look and feel of a native application
+		 from a web application. Luckily, both Android and iOS provide simple functions to make this possible.</p><br>
+		 
+		 <h2>Android</h2>
+		 <p>Android provides a simple way to create the native look and feel of an application with a web app. This is 
+		 done through the use of <A HREF="http://developer.android.com/guide/webapps/webview.html">WebViews.</A></p><br>
+		 <p>First, make sure the application has access to the internet. Add the following to the application's manifest file:</p><br>
+		 
+		 <pre><div id="code">
+&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+		</div></pre><br>
+		
+		<p>Next, add a WebView element to the application's UI xml file, such as:</p><br>
+		 
+		 <pre><div id="code">
+&lt;WebView  
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/webview"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+/&gt;
+		</div></pre><br>
+		
+		<p>Finally, create a handle to the WebView and call the loadUrl method in your application's main java file:</p><br>
+		 
+		 <pre><div id="code">
+WebView browser = (WebView) findViewById(R.id.webview);
+browser.loadUrl("http://www.example.com");
+		</div></pre><br>
+		
+		<h2>iOS</h2>
+		 <p>iOS also provides a simple way to create the native look and feel of an application with a web app. This is 
+		 again done through the use of <A HREF="http://conecode.com/news/2011/05/ios-tutorial-creating-a-web-view-uiwebview/">WebViews.</A></p><br>
+		 <p>For a simple an easy to use tutorial for iOS, look <A HREF="http://conecode.com/news/2011/05/ios-tutorial-creating-a-web-view-uiwebview/">here.</A></p><br>
+		 
 		 </div>
 		 <!-- End Right Column -->
 		 

@@ -1,5 +1,7 @@
 * { padding: 0; margin: 0; }
 
+html { overflow-y: scroll; }
+
 a, a:visited {
 	color:#0F0F83;
 	font-weight:bold;
@@ -62,6 +64,8 @@ body {
  border: black dashed 1px;
  padding: 6px;
  margin: 0em 3em 0em 3em;
+ font-size: small;
+ font-weight: bold;
 }
 
 ul, ol {

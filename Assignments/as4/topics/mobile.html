@@ -40,8 +40,49 @@
 		 
 			<h1>Mobile Interface Design</h1>
 			<br>
-			<p>Web-enabled mobile devices are becoming increasingly prevalent, and understanding their strengths and limitations is the key to creating well designed interfaces with these devices in mind. <a href="http://www.w3.org/standards/webdesign/mobilweb">W3.org</a> specifies standards and <a href="http://www.w3.org/TR/mobile-bp/">best practices</a> for these devices, which have unique constraints.<br><br>
-			As W3.org points out, a number of the barriers that mobile users face are similar to those of users with disabilities. For example, the lack of a mouse or separate keyboard is often an overlapping concern.</p>
+			<p>Web-enabled mobile devices are becoming increasingly prevalent, and understanding their strengths and limitations is the key to creating well designed interfaces with these devices in mind. <a href="http://www.w3.org/standards/webdesign/mobilweb">W3.org</a> specifies standards for these devices, which have unique constraints.<br><br>
+			As W3.org points out, a number of the barriers that mobile users face are similar to those of users with disabilities. For example, the lack of mouse or keyboard functionality is often an overlapping concern.
+			<br><br>
+			Some helpful resources for mobile design include <a href="http://www.mobilexweb.com/blog/ui-guidelines-mobile-tablet-design">mobilexweb.com</a>, which has a list of official user interface and user experience guidelines from the manufacturers of mobile devices. Key among these are the <a href="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/mobilehig/Principles.html">iOS design principles</a> and the <a href="https://developer.android.com/design/index.html">Android design principles</a>. W3.org also supplies mobile web <a href="http://www.w3.org/TR/2008/REC-mobile-bp-20080729/">best practices</a> and mobile web <i>application</i> <a href="http://www.w3.org/TR/2010/REC-mwabp-20101214/">best practices</a>. Several of these follow:
+			<br><br>
+			<ul>
+			
+				<li><b>Make telephone numbers click to call.</b> This can be as simple as using a standardized telephone URI scheme. In this case:<br><br>
+				<div id="code">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;tel:[PHONE-NUMBER]&quot;&gt;[PHONE-NUMBER]&lt;/a&gt;
+				</div>
+				<br>
+				e.g., <a href="tel:+1-555-555-5555">+1-555-555-5555</a>
+				<br><br>
+				Note that the full international prefix is used so that it will work outside of its home country. After all, these devices are mobile.
+				</li><br>
+				
+				<li><b>Ensure paragraph text flows.</b> Small screens make it important for text to be responsive to screen size so that no horizontal scrolling is required, and also so that it will re-flow if the view orientation is changed. In essence, this requires using percentage and relative measures:
+				<br><br>
+				<div id="code">
+				em, ex, bolder, larger, thick
+				</div>
+				<br>
+				Avoid absolutes or pixels.
+				</li><br>
+				
+				<li><b>Keep DOM size reasonable.</b> The in-memory size of the Document Object Model (DOM) may be limited on mobile devices. Exceeding this limit can result in unpredictable errors. Limiting the amount of information in the DOM at a single time using pagination (e.g., limiting google results to 10 per page) can prevent this from happening.
+				</li><br>
+				
+				<li><b>Use the meta viewport element to identify desired screen size.</b> Some browsers attempt to display desktop pages on small screens by automatically zooming the display, which can interfere with other optimizations for smaller screens. The viewport meta tag tells the devices at what scale to render the page.
+				<br><br>
+				<div id="code">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+				</div>
+				<br>
+				This is inserted into the <b>&lt;head&gt;</b> element of the HTML document, and prevents browser based scaling.
+				</li><br>
+				
+				<li><b>Offer users a choice of interfaces.</b> Device characteristic detection is imperfect, and cannot always account for the different use cases of an application. As such, it's important to offer the user the choice to change the display version if more than one version exists. It's important when doing so to default to the most appropriate UI on first use, and to store/remember the selection preference for future visits, either in local data storage or in a cookie.
+				</li><br>
+				
+				<li><b>Use gestures.</b> Many mobile devices do not have a dedicated pointing device, and typically a software keyboard that interferes with the display area. As such, bypassing the need for those with finger gestures to allow for swiping and dragging will improve the response time of your design for mobile users.
+				</li>
 		
 		 </div>
 		 <!-- End Right Column -->

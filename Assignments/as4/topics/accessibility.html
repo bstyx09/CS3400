@@ -24,19 +24,58 @@
 		 <div id="leftcolumn">
 		 
 			   <A HREF="../index.html">Home</A><br><br>
-			   <A HREF="./interface.html" style="padding-left:1em">Interface Design Rules</A><br>
-			   <A HREF="./fonts.html" style="padding-left:1em">Fonts</A><br>
-			   <A HREF="./color.html" style="padding-left:1em">Color</A><br>
-			   <A HREF="./sound.html" style="padding-left:1em">Sound</A><br>
-			   <A HREF="./accessibility.html" style="padding-left:1em">Accessibility</A><br>
-			   <A HREF="./mobile.html" style="padding-left:1em">Mobile Devices</A><br>
-			   <A HREF="./examples.html" style="padding-left:1em">Interface Examples</A><br>
-			   <A HREF="./native.html" style="padding-left:1em">Native App</A><br>
+			   <A HREF="./interface.html">Interface Design</A><br>
+			   <A HREF="./fonts.html">Fonts</A><br>
+			   <A HREF="./color.html">Color</A><br>
+			   <A HREF="./sound.html">Sound</A><br>
+			   <img height="15px" width="15px" src="../images/right.png"></img><A HREF="./accessibility.html">Accessibility</A><br>
+			   <A HREF="./mobile.html">Mobile Devices</A><br>
+			   <A HREF="./examples.html">Interface Examples</A><br>
+			   <A HREF="./native.html">Native Apps</A>
 		 </div>
 		 <!-- End Left Column -->
 		 
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn">
+		 
+			<h1>Accessibility</h1>
+			<br><br>
+			<p>Accessibility focuses on how a disabled person accesses or benefits from a site, system or application. This is an important part of designing your site and should be considered throughout the development process. (<a href="http://www.usability.gov/what-and-why/accessibility.html">Usability.org</a>)
+			<br><br>
+			But why is this important? According to <a href="http://www.w3.org/standards/webdesign/accessibility">W3.org</a>, accessibility for users of all levels is <b>a basic human right</b> which supports <b>social inclusion</b>, and also makes good <b>business sense</b>. Additionally, accessibility tends to go hand in hand with best practices for design philosophies for mobile web sites, device independence, multi-modal interaction, usability, design for older users and search engine optimization.</p> 
+			<br>
+			<h2>Best Practices</h2>
+			<br>
+			<p>So now that we have shown the value for designing with accessibility in mind, how do we implement such content? A fantastic guide for doing so is the <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/">Web Content Accessibility Guidelines 2.0</a>, last updated September 16, 2014. Some basic examples of accessible feature implementation follow.</p>
+			<br>
+			<h3>Alternative Image Text</h3>
+			<br>
+			<p>Alt text for images is a simple way to duplicate the basic information from an image in an accessible way for users who can't view the image. (This is not limited to disabilities, but also includes constraints of infrastructure such as rural or third world locations that don't have much bandwidth, as just one example.)
+			<br><br>
+			Alt text allows screen readers to relay the image information to people who can't see the screen, as well as make it available to technologies such as search engines.</p>
+			<br>
+			<img height="200px" width="180px" src="../images/redapple.png" alt="This is a red apple."></img>
+			<img src="" alt="This is a red apple."></img>
+			<br><br>
+			<p>This is simple to do, yet keeps a user's experience relatively consistent regardless of his or her ability to view images.</p>
+			<br>
+			<h3>Color Awareness</h3>
+			<br>
+			<p>In a similar vein, while color is a wonderful stylistic element to a user interface, a good design should never rely solely on color differentiation as a navigation tool or indicator, as color blindness makes such features much less useful. Instead, use more explicit differentiation, or perhaps reinforce color design with information of another form.</p>
+			<br>
+			<h3>Keyboard Input</h3>
+			<br>
+			<p>Not everyone can use a mouse, and providing functionality for keyboard-only input or some combination therein helps to include a larger user base. This also assists users who may not be able to fully use a keyboard, but can use speech input with assistive technologies that mimic a keyboard.</p>
+			<br>
+			<h3>Audio/Video Transcripts</h3>
+			<br>
+			<p>Audio and video content are everywhere, and while not everyone can experience them in that form, text transcripts broaden those who can interact with those elements of a site. Transcripts also provide search engines with information about the content.</p>
+			<br>
+			<h3>Secondary Experience</h3>
+			<br>
+			<p>The design of accessibility in a website often is thought of as secondary to the main design. While in some ways this is true, depending on the user base, that doesn't mean the disabled user should have a lesser experience to the standard user. Though the design may be simplified or distilled down to basics from some untenable features, the overall experience of users with disabilities should be functional, rich and enjoyable.</p>
+			<br>
+			
 		 </div>
 		 <!-- End Right Column -->
 		 

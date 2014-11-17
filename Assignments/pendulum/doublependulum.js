@@ -90,12 +90,12 @@ var circle2 = new Kinetic.Circle({
 	strokeWidth: 1
 });
 
-var trail = new Kinetic.Line({
+var trail1 = new Kinetic.Line({
     points:[0,0,0,0],
     stroke:"purple",
     strokeWidth:1
 });
-layerTwo.add(trail);
+layerTwo.add(trail1);
 
 var trail2 = new Kinetic.Line({
     points:[0,0,0,0],
@@ -125,19 +125,18 @@ function setAndDraw(){
     line1.setPoints([x0, y0, circle1.getX(), circle1.getY()]);
     line2.setPoints([circle1.getX(), circle1.getY(), circle2.getX(), circle2.getY()]);
 	
-	if(document.getElementById('line1Set').checked) 
-	{
+	//trail1.setPoints([circle1.getX(), circle1.getY(),circle1.getX(), circle1.getY()]);
+	//trail2.setPoints([circle2.getX(), circle2.getY(),circle2.getX(), circle2.getY()]);
+	
+	if(document.getElementById('line1Set').checked) {
 		line1.visible(true);
-	}else
-	{
+	}else{
 		line1.visible(false);
 	}
 	
-	if(document.getElementById('line2Set').checked) 
-	{
+	if(document.getElementById('line2Set').checked) {
 		line2.visible(true);
-	}else
-	{
+	}else{
 		line2.visible(false);
 	}
 	
@@ -147,6 +146,23 @@ function setAndDraw(){
     layerTwo.draw();
 };
 
+function toggleTrail1Vis()
+{
+	if(document.getElementById('trail1Set').checked) {
+		trail1.visible(true);
+	}else{
+		trail1.visible(false);
+	}
+}
+
+function toggleTrail2Vis()
+{
+	if(document.getElementById('trail2Set').checked) {
+		trail2.visible(true);
+	}else{
+		trail2.visible(false);
+	}
+}
 
 //points=[];
 //points2=[];
@@ -179,7 +195,7 @@ var anim = new Kinetic.Animation(function(frame) {
     line2.setPoints([circle1.getX(), circle1.getY(), circle2.getX(), circle2.getY()]);
 	
 	points.push(circle2.getX(),circle2.getY());
-	trail.setPoints(points);
+	trail1.setPoints(points);
 	
 	points2.push(circle1.getX(),circle1.getY());
 	trail2.setPoints(points2);

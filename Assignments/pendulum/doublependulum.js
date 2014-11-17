@@ -90,6 +90,20 @@ var circle2 = new Kinetic.Circle({
 	strokeWidth: 1
 });
 
+var trail = new Kinetic.Line({
+    points:[0,0,0,0],
+    stroke:"purple",
+    strokeWidth:1
+});
+layerTwo.add(trail);
+
+var trail2 = new Kinetic.Line({
+    points:[0,0,0,0],
+    stroke:"green",
+    strokeWidth:1
+});
+layerTwo.add(trail2);
+
 
 layerTwo.add(line1);
 layerTwo.add(line2);
@@ -130,6 +144,10 @@ function setAndDraw(){
     layerTwo.draw();
 };
 
+
+points=[];
+points2=[];
+
 // calculation routines and animation function which is called repeatedly
 var anim = new Kinetic.Animation(function(frame) {
 
@@ -156,6 +174,12 @@ var anim = new Kinetic.Animation(function(frame) {
     // redraw both lines
     line1.setPoints([x0, y0, circle1.getX(), circle1.getY()]);
     line2.setPoints([circle1.getX(), circle1.getY(), circle2.getX(), circle2.getY()]);
+	
+	points.push(circle2.getX(),circle2.getY());
+	trail.setPoints(points);
+	
+	points2.push(circle1.getX(),circle1.getY());
+	trail2.setPoints(points2);
 
 }, layerTwo);
 

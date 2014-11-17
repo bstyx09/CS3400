@@ -141,12 +141,15 @@ function setAndDraw(){
 		line2.visible(false);
 	}
 	
+	points=[];
+	points2=[];
+	
     layerTwo.draw();
 };
 
 
-points=[];
-points2=[];
+//points=[];
+//points2=[];
 
 // calculation routines and animation function which is called repeatedly
 var anim = new Kinetic.Animation(function(frame) {

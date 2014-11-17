@@ -220,17 +220,19 @@ document.getElementById("a1Input").addEventListener("input", function(){
 
 document.getElementById("a1Slider").addEventListener("change", function(){
 	theta1 = document.getElementById("a1Slider").value;
-	Theta2 = theta2*(Math.PI)/2;
+	Theta1 = theta1*(Math.PI)/2;
 	setAndDraw();
 });
 
 // changes theta2 variable
 document.getElementById("a2Input").addEventListener("input", function(){
 	theta2 = document.getElementById("a2Input").value;
+	Theta2 = theta2*(Math.PI)/2;
 	setAndDraw();
 });
 
 document.getElementById("a2Slider").addEventListener("change", function(){
 	theta2 = document.getElementById("a2Slider").value;
+	Theta2 = theta2*(Math.PI)/2;
 	setAndDraw();
 });

@@ -252,3 +252,13 @@ document.getElementById("a2Slider").addEventListener("change", function(){
 	Theta2 = theta2*(Math.PI)/2;
 	setAndDraw();
 });
+
+function fileLoad(){
+	m1 = document.getElementById("m1Input").value;
+	m2 = document.getElementById("m2Input").value;
+	theta1 = document.getElementById("a1Input").value;
+	Theta1 = theta1*(Math.PI)/2;
+	theta2 = document.getElementById("a2Input").value;
+	Theta2 = theta2*(Math.PI)/2;
+	setAndDraw();
+};

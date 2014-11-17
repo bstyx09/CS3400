@@ -194,10 +194,10 @@ var anim = new Kinetic.Animation(function(frame) {
     line1.setPoints([x0, y0, circle1.getX(), circle1.getY()]);
     line2.setPoints([circle1.getX(), circle1.getY(), circle2.getX(), circle2.getY()]);
 	
-	points.push(circle2.getX(),circle2.getY());
+	points.push(circle1.getX(),circle1.getY());
 	trail1.setPoints(points);
 	
-	points2.push(circle1.getX(),circle1.getY());
+	points2.push(circle2.getX(),circle2.getY());
 	trail2.setPoints(points2);
 
 }, layerTwo);

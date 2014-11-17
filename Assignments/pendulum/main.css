@@ -1,0 +1,36 @@
+#menu {
+	height: 756px;
+	width: 260px;
+	color: #FFFFFF;
+ 	background-color: #001827;
+ 	border-style: solid;
+ 	border-width: 2px 0px 2px 2px;
+ 	border-color: #000000;
+ 	padding: 20px;
+ 	float: left;
+}
+
+#container {
+	height: 796px;
+	width: 796px;
+	border-style: solid;
+ 	border-width: 2px 2px 2px 2px;
+ 	border-color: #000000;
+	float: left;
+}
+
+input {
+	margin-left: 1em;
+}
+
+input[type="number"] {
+ 	width: 45px;
+} 
+
+h2 {
+	margin-left: 2em;
+}
+
+button[type="button"] {
+	margin-left: 2em;
+} 

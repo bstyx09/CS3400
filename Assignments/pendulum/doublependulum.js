@@ -110,7 +110,23 @@ function setAndDraw(){
     // redraw both lines
     line1.setPoints([x0, y0, circle1.getX(), circle1.getY()]);
     line2.setPoints([circle1.getX(), circle1.getY(), circle2.getX(), circle2.getY()]);
-
+	
+	if(document.getElementById('line1Set').checked) 
+	{
+		line1.visible(true);
+	}else
+	{
+		line1.visible(false);
+	}
+	
+	if(document.getElementById('line2Set').checked) 
+	{
+		line2.visible(true);
+	}else
+	{
+		line2.visible(false);
+	}
+	
     layerTwo.draw();
 };
 

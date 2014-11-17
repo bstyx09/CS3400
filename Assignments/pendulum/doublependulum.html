@@ -21,6 +21,65 @@
 				document.getElementById('a2Input').value=val;
 				document.getElementById('a2Slider').value=val;
 			}
+			
+			function saveTextAsFile()
+			{
+				var y = "\r\n";
+				var textToWrite1 = document.getElementById("m1Input").value;
+				var textToWrite2 = document.getElementById("m2Input").value;
+				var textToWrite3 = document.getElementById("a1Input").value;
+				var textToWrite4 = document.getElementById("a2Input").value;
+				
+				var x = textToWrite1+y+textToWrite2+y+textToWrite3+y+textToWrite4;
+				var textFileAsBlob = new Blob([x], {type:'text/plain'});
+				var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+
+				var downloadLink = document.createElement("a");
+				downloadLink.download = fileNameToSaveAs;
+				downloadLink.innerHTML = "Download File";
+				if (window.webkitURL != null)
+				{
+					// Chrome allows the link to be clicked
+					// without actually adding it to the DOM.
+					downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+				}
+				else
+				{
+					// Firefox requires the link to be added to the DOM
+					// before it can be clicked.
+					downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+					downloadLink.onclick = destroyClickedElement;
+					downloadLink.style.display = "none";
+					document.body.appendChild(downloadLink);
+				}
+
+				downloadLink.click();
+			}
+
+			function loadFileAsText()
+			{
+				var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+				var fileReader = new FileReader();
+				fileReader.onload = function(fileLoadedEvent) 
+				{
+					var textFromFileLoaded = fileLoadedEvent.target.result;
+					var res = textFromFileLoaded.split("\r\n");
+					document.getElementById("m1Input").value = res[0];
+					document.getElementById('m1Slider').value = res[0];
+					
+					document.getElementById("m2Input").value = res[1];
+					document.getElementById('m2Slider').value = res[1];
+					
+					document.getElementById("a1Input").value = res[2];
+					document.getElementById('a1Slider').value = res[2];
+					
+					document.getElementById("a2Input").value = res[3];
+					document.getElementById('a2Slider').value = res[3];
+				};
+				fileReader.readAsText(fileToLoad, "UTF-8");
+				
+			}
 		</script>
 		
 	</head>
@@ -57,6 +116,19 @@
 			<input type="number" id="a2Input" min="-2" max="2" value="1" step="0.01" onchange="updateA2Input(this.value);">
 			<input type="range" id="a2Slider" min="-2" max="2" value="1" step="0.01" onchange="updateA2Input(this.value);">
 			<br><br>
+			
+			File Name to Save As:  
+			<br>
+			<input id="inputFileNameToSaveAs"></input><br><br>
+			<button onclick="saveTextAsFile()">Save Text to File</button>
+			<br><br>
+			
+			Select a File to Load: 
+			<br>
+			<input type="file" id="fileToLoad"><br><br>
+			<button onclick="loadFileAsText()">Load Selected File</button>
+			<br><br>
+			
 			</div>
 
 			<div id="container">

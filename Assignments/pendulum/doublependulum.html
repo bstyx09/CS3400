@@ -33,7 +33,6 @@
 				var x = textToWrite1+y+textToWrite2+y+textToWrite3+y+textToWrite4;
 				var textFileAsBlob = new Blob([x], {type:'text/plain'});
 				var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
-
 				var downloadLink = document.createElement("a");
 				downloadLink.download = fileNameToSaveAs;
 				downloadLink.innerHTML = "Download File";
@@ -52,14 +51,11 @@
 					downloadLink.style.display = "none";
 					document.body.appendChild(downloadLink);
 				}
-
 				downloadLink.click();
 			}
-
 			function loadFileAsText()
 			{
 				var fileToLoad = document.getElementById("fileToLoad").files[0];
-
 				var fileReader = new FileReader();
 				fileReader.onload = function(fileLoadedEvent) 
 				{
@@ -76,7 +72,6 @@
 					
 					document.getElementById("a2Input").value = res[3];
 					document.getElementById('a2Slider').value = res[3];
-
 					fileLoad();
 				};
 				fileReader.readAsText(fileToLoad, "UTF-8");
@@ -135,6 +130,13 @@
 			<br>
 			<input id="line1Set" type="checkbox" name="line" value="line1" onclick='setAndDraw();'checked>Line 1<br>
 			<input id="line2Set" type="checkbox" name="line" value="line2" onclick='setAndDraw();'checked>Line 2
+			<br><br>
+			
+			Trails Visible:
+			<br>
+			<input id="trail1Set" type="checkbox" name="trail" value="trail1" onclick='toggleTrail1Vis();'checked>Trail 1<br>
+			<input id="trail2Set" type="checkbox" name="trail" value="trail2" onclick='toggleTrail2Vis();'checked>Trail 2
+			<br><br>
 			
 			</div>
 

@@ -90,6 +90,20 @@ var circle2 = new Kinetic.Circle({
 	strokeWidth: 1
 });
 
+var trail1 = new Kinetic.Line({
+    points:[0,0,0,0],
+    stroke:"purple",
+    strokeWidth:1
+});
+layerTwo.add(trail1);
+
+var trail2 = new Kinetic.Line({
+    points:[0,0,0,0],
+    stroke:"green",
+    strokeWidth:1
+});
+layerTwo.add(trail2);
+
 
 layerTwo.add(line1);
 layerTwo.add(line2);
@@ -111,24 +125,47 @@ function setAndDraw(){
     line1.setPoints([x0, y0, circle1.getX(), circle1.getY()]);
     line2.setPoints([circle1.getX(), circle1.getY(), circle2.getX(), circle2.getY()]);
 	
-	if(document.getElementById('line1Set').checked) 
-	{
+	//trail1.setPoints([circle1.getX(), circle1.getY(),circle1.getX(), circle1.getY()]);
+	//trail2.setPoints([circle2.getX(), circle2.getY(),circle2.getX(), circle2.getY()]);
+	
+	if(document.getElementById('line1Set').checked) {
 		line1.visible(true);
-	}else
-	{
+	}else{
 		line1.visible(false);
 	}
 	
-	if(document.getElementById('line2Set').checked) 
-	{
+	if(document.getElementById('line2Set').checked) {
 		line2.visible(true);
-	}else
-	{
+	}else{
 		line2.visible(false);
 	}
 	
+	points=[];
+	points2=[];
+	
     layerTwo.draw();
 };
+
+function toggleTrail1Vis()
+{
+	if(document.getElementById('trail1Set').checked) {
+		trail1.visible(true);
+	}else{
+		trail1.visible(false);
+	}
+}
+
+function toggleTrail2Vis()
+{
+	if(document.getElementById('trail2Set').checked) {
+		trail2.visible(true);
+	}else{
+		trail2.visible(false);
+	}
+}
+
+//points=[];
+//points2=[];
 
 // calculation routines and animation function which is called repeatedly
 var anim = new Kinetic.Animation(function(frame) {
@@ -156,6 +193,12 @@ var anim = new Kinetic.Animation(function(frame) {
     // redraw both lines
     line1.setPoints([x0, y0, circle1.getX(), circle1.getY()]);
     line2.setPoints([circle1.getX(), circle1.getY(), circle2.getX(), circle2.getY()]);
+	
+	points.push(circle1.getX(),circle1.getY());
+	trail1.setPoints(points);
+	
+	points2.push(circle2.getX(),circle2.getY());
+	trail2.setPoints(points2);
 
 }, layerTwo);
 

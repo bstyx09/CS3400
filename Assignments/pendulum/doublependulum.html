@@ -93,26 +93,39 @@
 			<br>
 			<hr>
 			<br>
-			Mass 1: ( 1 to 100 )
+			Mass 1 ( 1 to 100 ):
 			<br>
 			<input type="number" id="m1Input" min="1" max="100" value="25" onchange="updateM1Input(this.value);"> 
 			<input type="range" id="m1Slider" min="1" max="100" value ="25" onchange="updateM1Input(this.value);">
 			<br><br>
-			Mass 2:  ( 1 to 100 )
+			Mass 2 ( 1 to 100 ):
 			<br>
 			<input type="number" id="m2Input" min="1" max="100" value="25" onchange="updateM2Input(this.value);"> 
 			<input type="range" id="m2Slider" min="1" max="100" value="25" onchange="updateM2Input(this.value);">
 			<br><br>
-			Angle 1:  ( -2π to 2π )
+			Angle 1 ( -2π to 2π ):
 			<br>
 			<input type="number" id="a1Input" min="-2" max="2" value="0" step="0.01" onchange="updateA1Input(this.value);">
 			<input type="range" id="a1Slider" min="-2" max="2" value="0" step="0.01" onchange="updateA1Input(this.value);">
 			<br><br>
-			Angle 2:  ( -2π to 2π )  
+			Angle 2 ( -2π to 2π ):  
 			<br>
 			<input type="number" id="a2Input" min="-2" max="2" value="1" step="0.01" onchange="updateA2Input(this.value);">
 			<input type="range" id="a2Slider" min="-2" max="2" value="1" step="0.01" onchange="updateA2Input(this.value);">
 			<br><br>
+			
+			Show/Hide:
+			<br>
+			<input id="line1Set" type="checkbox" checked>Line 1
+			<input id="circle1Set" type="checkbox" checked>Circle 1
+			<input id="trail1Set" type="checkbox" checked>Trail 1
+			<br>
+			<input id="line2Set" type="checkbox" checked>Line 2
+			<input id="circle2Set" type="checkbox" checked>Circle 2
+			<input id="trail2Set" type="checkbox" checked>Trail 2
+			<br><br>
+
+			<hr>
 			
 			File Name to Save As:  
 			<br>
@@ -125,19 +138,6 @@
 			<input type="file" id="fileToLoad"><br><br>
 			<button onclick="loadFileAsText()">Load Selected File</button>
 			<br><br>
-			
-			Lines Visible:
-			<br>
-			<input id="line1Set" type="checkbox" name="line" value="line1" onclick='setAndDraw();'checked>Line 1<br>
-			<input id="line2Set" type="checkbox" name="line" value="line2" onclick='setAndDraw();'checked>Line 2
-			<br><br>
-			
-			Trails Visible:
-			<br>
-			<input id="trail1Set" type="checkbox" name="trail" value="trail1" onclick='toggleTrail1Vis();'checked>Trail 1<br>
-			<input id="trail2Set" type="checkbox" name="trail" value="trail2" onclick='toggleTrail2Vis();'checked>Trail 2
-			<br><br>
-			
 			</div>
 
 			<div id="container">

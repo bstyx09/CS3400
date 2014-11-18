@@ -128,18 +128,6 @@ function setAndDraw(){
 	//trail1.setPoints([circle1.getX(), circle1.getY(),circle1.getX(), circle1.getY()]);
 	//trail2.setPoints([circle2.getX(), circle2.getY(),circle2.getX(), circle2.getY()]);
 	
-	if(document.getElementById('line1Set').checked) {
-		line1.visible(true);
-	}else{
-		line1.visible(false);
-	}
-	
-	if(document.getElementById('line2Set').checked) {
-		line2.visible(true);
-	}else{
-		line2.visible(false);
-	}
-	
 	points=[];
 	points2=[];
 	
@@ -167,9 +155,10 @@ function toggleTrail2Vis()
 //points=[];
 //points2=[];
 
-// calculation routines and animation function which is called repeatedly
+/** REPEATEDLY CALLED CALCULATIONS AND SUBSEQUENT ANIMATION ******************/
 var anim = new Kinetic.Animation(function(frame) {
 
+	// local time variable set to the difference between animation updates
 	var t = frame.timeDiff * 0.01;
 
 	// calculations from formula, no friction present
@@ -248,7 +237,8 @@ document.getElementById("resetButton").addEventListener("click", function(){
 
 });
 
-// changes m1 variable
+/** CHANGES M1 VARIABLE ******************************************************/
+
 document.getElementById("m1Input").addEventListener("input", function(){
 	m1 = document.getElementById("m1Input").value;
 	setAndDraw();
@@ -259,7 +249,8 @@ document.getElementById("m1Slider").addEventListener("change", function(){
 	setAndDraw();
 });
 
-// changes m2 variable
+/** CHANGES M2 VARIABLE ******************************************************/
+
 document.getElementById("m2Input").addEventListener("input", function(){
 	m2 = document.getElementById("m2Input").value;
 	setAndDraw();
@@ -270,7 +261,8 @@ document.getElementById("m2Slider").addEventListener("change", function(){
 	setAndDraw();
 });
 
-// changes theta1 variable
+/** CHANGES THETA1 VARIABLE **************************************************/
+
 document.getElementById("a1Input").addEventListener("input", function(){
 	theta1 = document.getElementById("a1Input").value;
 	Theta1 = theta1*(Math.PI)/2;
@@ -283,7 +275,8 @@ document.getElementById("a1Slider").addEventListener("change", function(){
 	setAndDraw();
 });
 
-// changes theta2 variable
+/** CHANGES THETA2 VARIABLE **************************************************/
+
 document.getElementById("a2Input").addEventListener("input", function(){
 	theta2 = document.getElementById("a2Input").value;
 	Theta2 = theta2*(Math.PI)/2;
@@ -295,6 +288,67 @@ document.getElementById("a2Slider").addEventListener("change", function(){
 	Theta2 = theta2*(Math.PI)/2;
 	setAndDraw();
 });
+
+
+/** LINE VISIBILITY CHECKS ***************************************************/
+document.getElementById("line1Set").addEventListener("change", function(){
+	if(document.getElementById("line1Set").checked) 
+	{
+		line1.visible(true);
+	}else
+	{
+		line1.visible(false);
+	}
+	// setAndDraw();
+});
+
+document.getElementById("line2Set").addEventListener("change", function(){
+	if(document.getElementById("line2Set").checked) 
+	{
+		line2.visible(true);
+	}else
+	{
+		line2.visible(false);
+	}
+	// setAndDraw();
+});
+
+/** CIRCLE VISIBILITY CHECKS *************************************************/
+
+document.getElementById("circle1Set").addEventListener("change", function(){
+	if(document.getElementById("circle1Set").checked) 
+	{
+		circle1.visible(true);
+	}else
+	{
+		circle1.visible(false);
+	}
+	// setAndDraw();
+});
+
+document.getElementById("circle2Set").addEventListener("change", function(){
+	if(document.getElementById("circle2Set").checked) 
+	{
+		circle2.visible(true);
+	}else
+	{
+		circle2.visible(false);
+	}
+	// setAndDraw();
+});
+
+/** TRAIL VISIBILITY CHECKS **************************************************/
+
+document.getElementById("trail1Set").addEventListener("change", function(){
+	toggleTrail1Vis();
+	// setAndDraw();
+});
+
+document.getElementById("trail2Set").addEventListener("change", function(){
+	toggleTrail2Vis();
+	// setAndDraw();
+});
+
 
 function fileLoad(){
 	m1 = document.getElementById("m1Input").value;

@@ -18,7 +18,7 @@ var g        = 9.8;
 
 var stage = new Kinetic.Stage({
 	container: 'container',
-	width: 796,
+	width: 896,
 	height: 796
 });
 
@@ -30,12 +30,12 @@ stage.add(layerOne);
 var grd = new Kinetic.Rect({
 	x: 0,
 	y: 0,
-	width: 796,
+	width: 896,
 	height: 796,
 	stroke: '#000',
 	strokeWidth: 0,
 	fillLinearGradientStartPoint: {x: 0, y: 0},
-    fillLinearGradientEndPoint: {x: 796, y: 796},
+    fillLinearGradientEndPoint: {x: 896, y: 796},
     fillLinearGradientColorStops: [0, '#009DFF', 1, '#000DFF']
 });
 
@@ -56,7 +56,6 @@ stage.add(layerTwo);
 
 // first line instantiation
 var line1 = new Kinetic.Line({
-	// points: [x0, y0, x0, y0 + l1],
 	stroke: 'black',
 	strokeWidth: 5,
 	lineCap: 'round'
@@ -64,8 +63,6 @@ var line1 = new Kinetic.Line({
 
 // first circle instantiation
 var circle1 = new Kinetic.Circle({
-	// x: x0,
-	// y: y0 + l1,
 	radius: m1 / 2,
 	fill: 'orange',
 	stroke: 'black',
@@ -74,7 +71,6 @@ var circle1 = new Kinetic.Circle({
 
 // second line instantiation
 var line2 = new Kinetic.Line({
-	// points: [x0, y0 + l1, x0, y0 + l1 + l2],
 	stroke: 'black',
 	strokeWidth: 5,
 	lineCap: 'round'
@@ -82,8 +78,6 @@ var line2 = new Kinetic.Line({
 
 // second circle instantiation
 var circle2 = new Kinetic.Circle({
-	// x: x0,
-	// y: y0 + l1 + l2,
 	radius: m2 / 2,
 	fill: 'orange',
 	stroke: 'black',
@@ -95,34 +89,102 @@ var trail1 = new Kinetic.Line({
     stroke:"purple",
     strokeWidth:1
 });
-layerTwo.add(trail1);
+
 
 var trail2 = new Kinetic.Line({
     points:[0,0,0,0],
-    stroke:"green",
+    stroke:"yellow",
     strokeWidth:1
 });
-layerTwo.add(trail2);
+
 
 var trailShort1 = new Kinetic.Line({
     points:[0,0,0,0],
     stroke:"purple",
     strokeWidth:1
 });
-layerTwo.add(trailShort1);
+
 
 var trailShort2 = new Kinetic.Line({
     points:[0,0,0,0],
-    stroke:"green",
+    stroke:"yellow",
     strokeWidth:1
 });
-layerTwo.add(trailShort2);
 
+
+var graphBar1 = new Kinetic.Rect({
+	x: 775,
+	y: 400,
+	width: 10,
+	height: 0,
+	fill: 'white',
+	stroke: 'white',
+	strokeWidth: 1
+});
+
+var graphBar2 = new Kinetic.Rect({
+	x: 815,
+	y: 400,
+	width: 10,
+	height: 0,
+	fill: 'white',
+	stroke: 'white',
+	strokeWidth: 1
+});
+
+var graphBar3 = new Kinetic.Rect({
+	x: 855,
+	y: 400,
+	width: 10,
+	height: 0,
+	fill: 'white',
+	stroke: 'white',
+	strokeWidth: 1
+});
+
+var P = new Kinetic.Text({
+	x: 760,
+	y: 394,
+	text: 'P',
+	fontSize: 14,
+	fontFamily: 'Calibri',
+	fill: 'white'
+});
+
+var K = new Kinetic.Text({
+	x: 800,
+	y: 394,
+	text: 'K',
+	fontSize: 14,
+	fontFamily: 'Calibri',
+	fill: 'white'
+});
+
+var T = new Kinetic.Text({
+	x: 840,
+	y: 394,
+	text: 'T',
+	fontSize: 14,
+	fontFamily: 'Calibri',
+	fill: 'white'
+});
+
+var graphBar3
 
 layerTwo.add(line1);
 layerTwo.add(line2);
 layerTwo.add(circle1);
 layerTwo.add(circle2);
+layerTwo.add(trail1);
+layerTwo.add(trail2);
+layerTwo.add(trailShort1);
+layerTwo.add(trailShort2);
+layerTwo.add(graphBar1);
+layerTwo.add(graphBar2);
+layerTwo.add(graphBar3);
+layerTwo.add(P);
+layerTwo.add(K);
+layerTwo.add(T);
 setAndDraw();
 
 function setAndDraw(){
@@ -145,42 +207,13 @@ function setAndDraw(){
 	pointsShort1=[];
 	pointsShort2=[];
 	
+	// resets graph bar heights
+	graphBar1.setHeight(0);
+	graphBar2.setHeight(0);
+	graphBar3.setHeight(0);
+
     layerTwo.draw();
 };
-
-function toggleTrail1Vis()
-{
-	if(document.getElementById('trail1Set').checked) {
-		if(document.getElementById('full').checked)
-		{
-			trail1.visible(true);
-			
-		}else
-		{
-			trailShort1.visible(true);
-		}
-	}else{
-		trail1.visible(false);
-		trailShort1.visible(false);
-	}
-}
-
-function toggleTrail2Vis()
-{
-	if(document.getElementById('trail2Set').checked) {
-		if(document.getElementById('full').checked)
-		{
-			trail2.visible(true);
-			
-		}else
-		{
-			trailShort2.visible(true);
-		}
-	}else{
-		trail2.visible(false);
-		trailShort2.visible(false);
-	}
-}
 
 /** REPEATEDLY CALLED CALCULATIONS AND SUBSEQUENT ANIMATION ******************/
 var anim = new Kinetic.Animation(function(frame) {
@@ -197,8 +230,16 @@ var anim = new Kinetic.Animation(function(frame) {
 	Theta1    += dTheta1 * t;
 	Theta2    += dTheta2 * t;
 
-	var xStep = circle1.getX();
-	var yStep = circle1.getY();
+	// graph representation of potential energy of the system
+	var potentialEnergy = (-1 * ((m1/100) + (m2/100)) * g * l1 * Math.cos(Theta1) - (m2/100) * g * l2 * Math.cos(Theta2)) / 15;
+	graphBar1.setHeight(potentialEnergy);
+	
+	// graph representation of kinetic energy of the system
+	var kineticEnergy = (.5 * (m1/100) * Math.pow(l1, 2) * Math.pow(dTheta1, 2) + .5 * (m2/100) * ( Math.pow(l1, 2) * Math.pow(dTheta1, 2) + Math.pow(l2, 2) * Math.pow(dTheta2, 2) + 2 * l1 * l2 * dTheta1 * dTheta2 * Math.cos(Theta1 - Theta2))) / 15;
+	graphBar2.setHeight(kineticEnergy);
+
+	// total energy of the system
+	graphBar3.setHeight(potentialEnergy + kineticEnergy);
 
 	// redraw both circles
 	circle1.setX(x0+l1*Math.sin(Theta1));
@@ -263,9 +304,6 @@ document.getElementById("resetButton").addEventListener("click", function(){
 	y0       = 350;
 	g        = 9.8;
 
-	// redraws elements
-	setAndDraw();
-
 	// defaults HTML input field and slider values
 	document.getElementById("m1Input").value = 25;
 	document.getElementById("m1Slider").value = 25;
@@ -275,6 +313,29 @@ document.getElementById("resetButton").addEventListener("click", function(){
 	document.getElementById("a1Slider").value = 0;
 	document.getElementById("a2Input").value = 1;
 	document.getElementById("a2Slider").value = 1;
+
+	// custom event used to trigger event handlers below
+	var event = new Event('change');
+	document.getElementById("full").checked = true;
+	document.getElementById("full").dispatchEvent(event);
+	document.getElementById("line1Set").checked = true;
+	document.getElementById("line1Set").dispatchEvent(event);
+	document.getElementById("circle1Set").checked = true;
+	document.getElementById("circle1Set").dispatchEvent(event);
+	document.getElementById("trail1Set").checked = true;
+	document.getElementById("trail1Set").dispatchEvent(event);
+	document.getElementById("line2Set").checked = true;
+	document.getElementById("line2Set").dispatchEvent(event);
+	document.getElementById("circle2Set").checked = true;
+	document.getElementById("circle2Set").dispatchEvent(event);
+	document.getElementById("trail2Set").checked = true;
+	document.getElementById("trail2Set").dispatchEvent(event);
+
+	trail1.destroy;
+	trail2.destroy;
+
+	// redraws elements
+	setAndDraw();
 
 });
 
@@ -340,7 +401,7 @@ document.getElementById("line1Set").addEventListener("change", function(){
 	{
 		line1.visible(false);
 	}
-	// setAndDraw();
+	setAndDraw();
 });
 
 document.getElementById("line2Set").addEventListener("change", function(){
@@ -351,7 +412,7 @@ document.getElementById("line2Set").addEventListener("change", function(){
 	{
 		line2.visible(false);
 	}
-	// setAndDraw();
+	setAndDraw();
 });
 
 /** CIRCLE VISIBILITY CHECKS *************************************************/
@@ -364,7 +425,7 @@ document.getElementById("circle1Set").addEventListener("change", function(){
 	{
 		circle1.visible(false);
 	}
-	// setAndDraw();
+	setAndDraw();
 });
 
 document.getElementById("circle2Set").addEventListener("change", function(){
@@ -375,19 +436,43 @@ document.getElementById("circle2Set").addEventListener("change", function(){
 	{
 		circle2.visible(false);
 	}
-	// setAndDraw();
+	setAndDraw();
 });
 
 /** TRAIL VISIBILITY CHECKS **************************************************/
 
 document.getElementById("trail1Set").addEventListener("change", function(){
-	toggleTrail1Vis();
-	// setAndDraw();
+	if(document.getElementById('trail1Set').checked) {
+		if(document.getElementById('full').checked)
+		{
+			trail1.visible(true);
+			
+		}else
+		{
+			trailShort1.visible(true);
+		}
+	}else{
+		trail1.visible(false);
+		trailShort1.visible(false);
+	}
+	setAndDraw();
 });
 
 document.getElementById("trail2Set").addEventListener("change", function(){
-	toggleTrail2Vis();
-	// setAndDraw();
+	if(document.getElementById('trail2Set').checked) {
+		if(document.getElementById('full').checked)
+		{
+			trail2.visible(true);
+			
+		}else
+		{
+			trailShort2.visible(true);
+		}
+	}else{
+		trail2.visible(false);
+		trailShort2.visible(false);
+	}
+	setAndDraw();
 });
 
 document.getElementById("full").addEventListener("change", function(){
@@ -399,6 +484,7 @@ document.getElementById("full").addEventListener("change", function(){
 		trail2.visible(true);
 		trailShort2.visible(false);
 	}
+	setAndDraw();
 });
 
 document.getElementById("comet").addEventListener("change", function(){
@@ -410,6 +496,7 @@ document.getElementById("comet").addEventListener("change", function(){
 		trail2.visible(false);
 		trailShort2.visible(true);
 	}
+	setAndDraw();
 });
 
 function fileLoad(){

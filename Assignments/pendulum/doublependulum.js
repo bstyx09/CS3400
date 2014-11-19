@@ -144,9 +144,18 @@ var graphBar3 = new Kinetic.Rect({
 });
 
 var Time = new Kinetic.Text({
-	x: 760,
+	x: 740,
 	y: 50,
-	text: '00:00',
+	text: '0.0',
+	fontSize: 26,
+	fontFamily: 'Calibri',
+	fill: 'white'
+});
+
+var TimeSeconds = new Kinetic.Text({
+	x: 800,
+	y: 50,
+	text: 'Seconds',
 	fontSize: 26,
 	fontFamily: 'Calibri',
 	fill: 'white'
@@ -194,6 +203,7 @@ layerTwo.add(graphBar1);
 layerTwo.add(graphBar2);
 layerTwo.add(graphBar3);
 layerTwo.add(Time);
+layerTwo.add(TimeSeconds);
 layerTwo.add(P);
 layerTwo.add(K);
 layerTwo.add(T);
@@ -228,7 +238,8 @@ function setAndDraw(){
 	graphBar2.setHeight(0);
 	graphBar3.setHeight(0);
 	
-	//
+	// resets date
+	startDate = new Date();
 
     layerTwo.draw();
 };
@@ -241,7 +252,8 @@ var anim = new Kinetic.Animation(function(frame) {
 	
 	//for timer
 	date = new Date();
-	var dateDif = (date - startDate);
+	var dateDif = (date - startDate)/1000;
+	dateDif = dateDif.toFixed(1);
 	Time.setText(dateDif.toString());
 
 	// calculations from formula, no friction present

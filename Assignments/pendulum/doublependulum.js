@@ -15,6 +15,7 @@ var l2       = 150;
 var x0       = 400;
 var y0       = 350;
 var g        = 9.8;
+var startDate = new Date();
 
 var stage = new Kinetic.Stage({
 	container: 'container',
@@ -142,6 +143,15 @@ var graphBar3 = new Kinetic.Rect({
 	strokeWidth: 1
 });
 
+var Time = new Kinetic.Text({
+	x: 760,
+	y: 50,
+	text: '00:00',
+	fontSize: 26,
+	fontFamily: 'Calibri',
+	fill: 'white'
+});
+
 var P = new Kinetic.Text({
 	x: 760,
 	y: 394,
@@ -183,6 +193,7 @@ layerTwo.add(circle2);
 layerTwo.add(graphBar1);
 layerTwo.add(graphBar2);
 layerTwo.add(graphBar3);
+layerTwo.add(Time);
 layerTwo.add(P);
 layerTwo.add(K);
 layerTwo.add(T);
@@ -216,6 +227,8 @@ function setAndDraw(){
 	graphBar1.setHeight(0);
 	graphBar2.setHeight(0);
 	graphBar3.setHeight(0);
+	
+	//
 
     layerTwo.draw();
 };
@@ -225,6 +238,11 @@ var anim = new Kinetic.Animation(function(frame) {
 
 	// local time variable set to the difference between animation updates
 	var t = frame.timeDiff * 0.01;
+	
+	//for timer
+	date = new Date();
+	var dateDif = (date - startDate);
+	Time.setText(dateDif.toString());
 
 	// calculations from formula, no friction present
 	mu        =  1 + (m1 / m2);
@@ -281,6 +299,7 @@ var anim = new Kinetic.Animation(function(frame) {
 // calls animation routine
 document.getElementById("startButton").addEventListener("click", function(){
 	anim.start();
+	startDate = new Date();
 });
 
 // stops animation routine

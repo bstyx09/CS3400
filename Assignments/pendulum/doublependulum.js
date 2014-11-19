@@ -275,6 +275,27 @@ var anim = new Kinetic.Animation(function(frame) {
 
 	// total energy of the system
 	graphBar3.setHeight(potentialEnergy + kineticEnergy);
+	
+	var vol = Math.abs(kineticEnergy)/Math.abs(potentialEnergy + kineticEnergy);
+	if(vol>1){
+		if(document.getElementById("soundSet").checked)
+		{
+			vid.volume = 1.0;
+		}else
+		{
+			vid.volume = 0.0;
+		}
+	}else
+	{
+		if(document.getElementById("soundSet").checked)
+		{
+			vid.volume = Math.round( vol * 10 ) / 10;
+		}else
+		{
+			vid.volume = 0.0;
+		}
+			
+	}
 
 	// redraw both circles
 	circle1.setX(x0+l1*Math.sin(Theta1));
@@ -312,11 +333,14 @@ var anim = new Kinetic.Animation(function(frame) {
 document.getElementById("startButton").addEventListener("click", function(){
 	anim.start();
 	startDate = new Date();
+	vid.play();
+	vid.volume = 0.5;
 });
 
 // stops animation routine
 document.getElementById("stopButton").addEventListener("click", function(){
 	anim.stop();
+	vid.pause();
 });
 
 // resets variables to defaults, redraws and defaults field values
@@ -531,6 +555,9 @@ document.getElementById("comet").addEventListener("change", function(){
 	}
 	//setAndDraw();
 });
+
+var vid = document.getElementById("myVideo");
+vid.loop = true; 
 
 function fileLoad(){
 	m1 = document.getElementById("m1Input").value;

@@ -104,6 +104,20 @@ var trail2 = new Kinetic.Line({
 });
 layerTwo.add(trail2);
 
+var trailShort1 = new Kinetic.Line({
+    points:[0,0,0,0],
+    stroke:"purple",
+    strokeWidth:1
+});
+layerTwo.add(trailShort1);
+
+var trailShort2 = new Kinetic.Line({
+    points:[0,0,0,0],
+    stroke:"green",
+    strokeWidth:1
+});
+layerTwo.add(trailShort2);
+
 
 layerTwo.add(line1);
 layerTwo.add(line2);
@@ -125,11 +139,11 @@ function setAndDraw(){
     line1.setPoints([x0, y0, circle1.getX(), circle1.getY()]);
     line2.setPoints([circle1.getX(), circle1.getY(), circle2.getX(), circle2.getY()]);
 	
-	//trail1.setPoints([circle1.getX(), circle1.getY(),circle1.getX(), circle1.getY()]);
-	//trail2.setPoints([circle2.getX(), circle2.getY(),circle2.getX(), circle2.getY()]);
-	
 	points=[];
 	points2=[];
+	
+	pointsShort1=[];
+	pointsShort2=[];
 	
     layerTwo.draw();
 };
@@ -137,23 +151,36 @@ function setAndDraw(){
 function toggleTrail1Vis()
 {
 	if(document.getElementById('trail1Set').checked) {
-		trail1.visible(true);
+		if(document.getElementById('full').checked)
+		{
+			trail1.visible(true);
+			
+		}else
+		{
+			trailShort1.visible(true);
+		}
 	}else{
 		trail1.visible(false);
+		trailShort1.visible(false);
 	}
 }
 
 function toggleTrail2Vis()
 {
 	if(document.getElementById('trail2Set').checked) {
-		trail2.visible(true);
+		if(document.getElementById('full').checked)
+		{
+			trail2.visible(true);
+			
+		}else
+		{
+			trailShort2.visible(true);
+		}
 	}else{
 		trail2.visible(false);
+		trailShort2.visible(false);
 	}
 }
-
-//points=[];
-//points2=[];
 
 /** REPEATEDLY CALLED CALCULATIONS AND SUBSEQUENT ANIMATION ******************/
 var anim = new Kinetic.Animation(function(frame) {
@@ -188,7 +215,21 @@ var anim = new Kinetic.Animation(function(frame) {
 	
 	points2.push(circle2.getX(),circle2.getY());
 	trail2.setPoints(points2);
-
+	
+	pointsShort1.push(circle1.getX(),circle1.getY());
+	if(pointsShort1.length>50){
+		pointsShort1.shift();
+		pointsShort1.shift();
+	}
+	trailShort1.setPoints(pointsShort1);
+	
+	pointsShort2.push(circle2.getX(),circle2.getY());
+	if(pointsShort2.length>50){
+		pointsShort2.shift();
+		pointsShort2.shift();
+	}
+	trailShort2.setPoints(pointsShort2);
+	
 }, layerTwo);
 
 // calls animation routine
@@ -349,6 +390,27 @@ document.getElementById("trail2Set").addEventListener("change", function(){
 	// setAndDraw();
 });
 
+document.getElementById("full").addEventListener("change", function(){
+	if(document.getElementById("trail1Set").checked){
+		trail1.visible(true);
+		trailShort1.visible(false);
+	}
+	if(document.getElementById("trail2Set").checked){
+		trail2.visible(true);
+		trailShort2.visible(false);
+	}
+});
+
+document.getElementById("comet").addEventListener("change", function(){
+	if(document.getElementById("trail1Set").checked){
+		trail1.visible(false);
+		trailShort1.visible(true);
+	}
+	if(document.getElementById("trail2Set").checked){
+		trail2.visible(false);
+		trailShort2.visible(true);
+	}
+});
 
 function fileLoad(){
 	m1 = document.getElementById("m1Input").value;

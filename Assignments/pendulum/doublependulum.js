@@ -201,12 +201,16 @@ function setAndDraw(){
     line1.setPoints([x0, y0, circle1.getX(), circle1.getY()]);
     line2.setPoints([circle1.getX(), circle1.getY(), circle2.getX(), circle2.getY()]);
 	
-	points=[];
+	// resets paths
+    points=[];
+	trail1.setPoints(points);
 	points2=[];
-	
+	trail2.setPoints(points2);
 	pointsShort1=[];
+	trailShort1.setPoints(pointsShort1);
 	pointsShort2=[];
-	
+	trailShort2.setPoints(pointsShort2);
+
 	// resets graph bar heights
 	graphBar1.setHeight(0);
 	graphBar2.setHeight(0);
@@ -330,9 +334,6 @@ document.getElementById("resetButton").addEventListener("click", function(){
 	document.getElementById("circle2Set").dispatchEvent(event);
 	document.getElementById("trail2Set").checked = true;
 	document.getElementById("trail2Set").dispatchEvent(event);
-
-	trail1.destroy;
-	trail2.destroy;
 
 	// redraws elements
 	setAndDraw();

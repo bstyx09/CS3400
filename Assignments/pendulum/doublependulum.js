@@ -171,14 +171,15 @@ var T = new Kinetic.Text({
 
 var graphBar3
 
-layerTwo.add(line1);
-layerTwo.add(line2);
-layerTwo.add(circle1);
-layerTwo.add(circle2);
 layerTwo.add(trail1);
 layerTwo.add(trail2);
 layerTwo.add(trailShort1);
 layerTwo.add(trailShort2);
+layerTwo.add(line1);
+layerTwo.add(line2);
+layerTwo.add(circle1);
+layerTwo.add(circle2);
+
 layerTwo.add(graphBar1);
 layerTwo.add(graphBar2);
 layerTwo.add(graphBar3);
@@ -402,7 +403,7 @@ document.getElementById("line1Set").addEventListener("change", function(){
 	{
 		line1.visible(false);
 	}
-	setAndDraw();
+	//setAndDraw();
 });
 
 document.getElementById("line2Set").addEventListener("change", function(){
@@ -413,7 +414,7 @@ document.getElementById("line2Set").addEventListener("change", function(){
 	{
 		line2.visible(false);
 	}
-	setAndDraw();
+	//setAndDraw();
 });
 
 /** CIRCLE VISIBILITY CHECKS *************************************************/
@@ -426,7 +427,7 @@ document.getElementById("circle1Set").addEventListener("change", function(){
 	{
 		circle1.visible(false);
 	}
-	setAndDraw();
+	//setAndDraw();
 });
 
 document.getElementById("circle2Set").addEventListener("change", function(){
@@ -437,7 +438,7 @@ document.getElementById("circle2Set").addEventListener("change", function(){
 	{
 		circle2.visible(false);
 	}
-	setAndDraw();
+	//setAndDraw();
 });
 
 /** TRAIL VISIBILITY CHECKS **************************************************/
@@ -456,7 +457,7 @@ document.getElementById("trail1Set").addEventListener("change", function(){
 		trail1.visible(false);
 		trailShort1.visible(false);
 	}
-	setAndDraw();
+	//setAndDraw();
 });
 
 document.getElementById("trail2Set").addEventListener("change", function(){
@@ -473,7 +474,7 @@ document.getElementById("trail2Set").addEventListener("change", function(){
 		trail2.visible(false);
 		trailShort2.visible(false);
 	}
-	setAndDraw();
+	//setAndDraw();
 });
 
 document.getElementById("full").addEventListener("change", function(){
@@ -485,7 +486,7 @@ document.getElementById("full").addEventListener("change", function(){
 		trail2.visible(true);
 		trailShort2.visible(false);
 	}
-	setAndDraw();
+	//setAndDraw();
 });
 
 document.getElementById("comet").addEventListener("change", function(){
@@ -497,7 +498,7 @@ document.getElementById("comet").addEventListener("change", function(){
 		trail2.visible(false);
 		trailShort2.visible(true);
 	}
-	setAndDraw();
+	//setAndDraw();
 });
 
 function fileLoad(){

@@ -250,7 +250,7 @@ var anim = new Kinetic.Animation(function(frame) {
 	// local time variable set to the difference between animation updates
 	var t = frame.timeDiff * 0.01;
 	
-	//for timer
+	// for timer
 	date = new Date();
 	var dateDif = (date - startDate)/1000;
 	dateDif = dateDif.toFixed(1);
@@ -391,6 +391,8 @@ document.getElementById("resetButton").addEventListener("click", function(){
 	document.getElementById("trail2Set").checked = true;
 	document.getElementById("trail2Set").dispatchEvent(event);
 
+	Time.setText(0.0);
+
 	// redraws elements
 	setAndDraw();
 
@@ -439,13 +441,13 @@ document.getElementById("a1Slider").addEventListener("change", function(){
 document.getElementById("a2Input").addEventListener("input", function(){
 	theta2 = document.getElementById("a2Input").value;
 	Theta2 = theta2*(Math.PI)/2;
-	setAndDraw();
+	//setAndDraw();
 });
 
 document.getElementById("a2Slider").addEventListener("change", function(){
 	theta2 = document.getElementById("a2Slider").value;
 	Theta2 = theta2*(Math.PI)/2;
-	setAndDraw();
+	//setAndDraw();
 });
 
 
